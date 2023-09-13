@@ -1,0 +1,41 @@
+import { createGlobalStyle } from "styled-components";
+
+export default createGlobalStyle`
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--inter);
+ }
+
+ :root {
+    --opaque: #00000080;
+    --black: #000000;
+    --white: #FFFFFF;
+    --grey: #AAAAAA;
+    --aqua: #00FFFF;
+
+    --days-one: 'Days One', sans-serif;
+    --inter: 'Inter', sans-serif;
+    --monoton: 'Monoton', cursive;
+    --shrikhand: 'Shrikhand', cursive;
+ }
+
+ a {
+    text-decoration: none;
+ }
+
+ button {
+    cursor: pointer;
+ }
+
+ ul, ol, li {
+    list-style: none;
+ }
+
+ body {
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: var(--black);
+ }
+`;
