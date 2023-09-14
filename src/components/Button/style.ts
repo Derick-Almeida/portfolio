@@ -23,11 +23,11 @@ export const button = styled.button`
     position: absolute;
     border-radius: 100%;
     transform: scale(0);
-    transition: transform 0.3s;
+    transition: transform 0.4s;
   }
 
   &:hover::before {
-    transform: scale(3.5);
+    transform: scale(4);
   }
 `;
 
@@ -39,4 +39,9 @@ export const p = styled.p`
 
   position: relative;
   z-index: 9;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
 `;
