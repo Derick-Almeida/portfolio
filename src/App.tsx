@@ -1,6 +1,6 @@
 import GlobalStyle from "./style/global";
 
-import NavBar from "./src/components/NavBar";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
