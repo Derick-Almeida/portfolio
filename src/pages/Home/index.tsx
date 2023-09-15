@@ -10,7 +10,7 @@ const Home = () => {
       <S.box>
         <S.img src={coding} alt="man coding" />
 
-        <S.div>
+        <div>
           <S.p>
             I <b>love</b> creating and <b>developing</b> projects
           </S.p>
@@ -18,7 +18,7 @@ const Home = () => {
             Discover here in this environment, created especially for you, all my projects and
             technologies
           </S.span>
-        </S.div>
+        </div>
       </S.box>
     </S.container>
   );

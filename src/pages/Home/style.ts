@@ -13,8 +13,6 @@ export const box = styled.div`
   gap: 4rem;
 `;
 
-export const div = styled.div``;
-
 export const img = styled.img`
   width: 45%;
 `;
