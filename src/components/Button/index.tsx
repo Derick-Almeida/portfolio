@@ -1,5 +1,5 @@
+import { IButtonProps } from "../../types";
 import * as S from "./style";
-import { IButtonProps } from "./types";
 
 const Button = ({ children, ...props }: IButtonProps) => {
   return (
