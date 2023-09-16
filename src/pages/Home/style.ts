@@ -3,7 +3,7 @@ import { colorChange } from "../../animations";
 
 export const container = styled.div`
   color: var(--white);
-  padding: 5vh 10%;
+  padding: 3rem 10%;
 `;
 
 export const box = styled.div`

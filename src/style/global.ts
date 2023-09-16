@@ -35,7 +35,9 @@ export default createGlobalStyle`
 
  body {
     min-width: 100%;
+    max-width: 100%;
     min-height: 100vh;
+    overflow: hidden auto;
     background-color: var(--black);
  }
 `;

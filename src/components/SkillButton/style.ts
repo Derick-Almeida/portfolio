@@ -11,6 +11,10 @@ export const span = styled.span`
   font-family: var(--days-one);
   font-weight: 600;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   animation: ${colorChange} 10s linear infinite;
   transition: 0.4s;
 
