@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colorChange } from "../../animations";
 
 export const span = styled.span`
   color: var(--white);
@@ -10,6 +11,7 @@ export const span = styled.span`
   font-family: var(--days-one);
   font-weight: 600;
 
+  animation: ${colorChange} 10s linear infinite;
   transition: 0.4s;
 
   &:hover {
