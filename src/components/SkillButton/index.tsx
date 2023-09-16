@@ -1,7 +1,8 @@
+import { IChildrenProps } from "../../types";
 import * as S from "./style";
 
-const SkillButton = () => {
-  return <S.span>skill-name</S.span>;
+const SkillButton = ({ children }: IChildrenProps) => {
+  return <S.span>{children}</S.span>;
 };
 
 export default SkillButton;
