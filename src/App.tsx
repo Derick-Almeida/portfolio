@@ -2,6 +2,7 @@ import GlobalStyle from "./style/global";
 
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
+import Paralax from "./components/Paralax";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <NavBar />
 
       <Home />
+      <Paralax />
     </>
   );
 }
