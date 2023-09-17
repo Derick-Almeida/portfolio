@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colorChange } from "../../animations";
 
 export const button = styled.button`
   background-color: var(--grey);
@@ -13,6 +14,8 @@ export const button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  animation: ${colorChange} 10s linear infinite;
 
   &::before {
     content: "";

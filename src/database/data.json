@@ -20,7 +20,7 @@
   "projects": [
     {
       "id": "92b24da1-76d7-4dc6-a17f-f14ade23baef",
-      "title": "shop now",
+      "title": "Shop Now",
       "image": "https://i.imgur.com/fRMWitY.png",
       "github": "https://github.com/Derick-Almeida/shop_now-react-ts",
       "site": "https://shop-now-dk.vercel.app/",
@@ -28,7 +28,7 @@
     },
     {
       "id": "fa9a2513-444f-470b-84c1-2596ae4b69b3",
-      "title": "project manager",
+      "title": "Project Manager",
       "image": "https://i.imgur.com/T2XuKDL.jpg",
       "github": "https://github.com/Derick-Almeida/api-project_manager-nodejs-ts",
       "site": "",
@@ -36,7 +36,7 @@
     },
     {
       "id": "2bbca05c-a1c3-43b1-9ae9-6c2148b655fb",
-      "title": "nukenzie",
+      "title": "NuKenzie",
       "image": "https://i.imgur.com/DJciWOM.png",
       "github": "https://github.com/Derick-Almeida/nukenzie-react-js",
       "site": "https://nukenzie-mu.vercel.app/",
@@ -44,7 +44,7 @@
     },
     {
       "id": "5253c913-a20b-4c30-bf1e-afff1b685040",
-      "title": "kimoveis",
+      "title": "Kimoveis",
       "image": "https://i.imgur.com/woJheFg.png",
       "github": "https://github.com/Derick-Almeida/api-kimoveis-nodejs-ts",
       "site": "",
@@ -52,7 +52,7 @@
     },
     {
       "id": "cad8aec9-564e-46ed-8da1-1cabba65adfd",
-      "title": "futcamp",
+      "title": "Futcamp",
       "image": "https://i.imgur.com/uhQ2IHX.png",
       "github": "https://github.com/Derick-Almeida/api-futcamp-django-py",
       "site": "",
@@ -60,7 +60,7 @@
     },
     {
       "id": "82592b1e-1601-4cf7-a998-6ffad7a581a8",
-      "title": "burger kenzie",
+      "title": "Burger Kenzie",
       "image": "https://i.imgur.com/npi9pJq.png",
       "github": "https://github.com/Derick-Almeida/burguer_kenzie-react-js",
       "site": "https://burguer-kenzie-derick-almeida.vercel.app/",
