@@ -15,6 +15,7 @@ export const div = styled.div`
 
 export const img = styled.img`
   width: 50%;
+  animation: ${colorChange} 10s linear infinite;
 `;
 
 export const ul = styled.ul`

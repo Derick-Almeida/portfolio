@@ -4,7 +4,6 @@
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="1700.000000pt" height="1000.000000pt" viewBox="0 0 1700.000000 1000.000000"
  preserveAspectRatio="xMidYMid meet">
-<style>@keyframes colorChange {0%{filter: hue-rotate(0deg);}100% {filter: hue-rotate(360deg);}}.changeColor {animation: colorChange 10s linear infinite}</style>
 <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
 fill="#00ffff" class="changeColor" stroke="none">
 <path d="M1194 9985 c-6 -15 -9 -534 -8 -1380 0 -335 0 -655 0 -710 -1 -140

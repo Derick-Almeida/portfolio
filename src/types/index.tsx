@@ -5,3 +5,12 @@ export interface IChildrenProps {
 }
 
 export type IButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
+export interface IProjectProps {
+  id: string;
+  title: string;
+  image: string;
+  github: string;
+  site: string;
+  hasFrontend: boolean;
+}

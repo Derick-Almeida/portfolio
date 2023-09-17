@@ -34,10 +34,21 @@ export default createGlobalStyle`
  }
 
  body {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100vh;
-    overflow: hidden auto;
-    background-color: var(--black);
+   min-width: 100%;
+   max-width: 100%;
+   min-height: 100vh;
+   overflow: hidden auto;
+   background-color: var(--black);
+ }
+
+ html {
+   &::-webkit-scrollbar{
+      width: 10px;
+   }
+   
+   &::-webkit-scrollbar-thumb{
+      background-color: var(--white);
+      border-radius: 50px;
+   }
  }
 `;

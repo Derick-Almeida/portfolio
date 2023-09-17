@@ -5,10 +5,10 @@ interface CardStyleProps {
 }
 
 export const li = styled.li<CardStyleProps>`
-  border: 2px solid var(--aqua);
+  border: 2px solid var(--white);
   border-radius: 8px;
   height: 35vh;
-  width: 45%;
+  width: 48%;
 
   background: url(${(props) => props.img}) top no-repeat;
   background-size: cover;

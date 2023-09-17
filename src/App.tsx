@@ -4,7 +4,8 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Paralax from "./components/Paralax";
 import Skills from "./pages/Skills";
-import Contacts from "./pages/Contacts/indext";
+import Projects from "./pages/Projects";
+import Contacts from "./pages/Contacts";
 import Footer from "./components/Footer";
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
       <Home />
       <Paralax />
       <Skills />
-
+      <Projects />
       <Paralax />
       <Contacts />
       <Footer />
