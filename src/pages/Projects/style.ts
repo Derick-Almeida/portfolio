@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colorChange } from "../../animations";
 
 export const container = styled.div`
   padding: 0 10% 10rem 10%;
@@ -23,5 +22,4 @@ export const div = styled.div`
 
 export const img = styled.img`
   width: 60%;
-  animation: ${colorChange} 10s linear infinite;
 `;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colorChange } from "../../animations";
 
 export const container = styled.div`
   color: var(--white);
@@ -15,7 +14,6 @@ export const box = styled.div`
 
 export const img = styled.img`
   width: 45%;
-  animation: ${colorChange} 10s linear infinite;
 `;
 
 export const p = styled.p`
@@ -27,7 +25,6 @@ export const p = styled.p`
     font-family: inherit;
     font-weight: 400;
     color: var(--aqua);
-    animation: ${colorChange} 10s linear infinite;
   }
 `;
 
