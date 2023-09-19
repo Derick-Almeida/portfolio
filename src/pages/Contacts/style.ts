@@ -6,6 +6,7 @@ export const container = styled.div`
 
 export const div = styled.div`
   padding: 0 10%;
+  margin-top: -5rem;
 
   display: flex;
   justify-content: space-between;

@@ -23,6 +23,8 @@ export default createGlobalStyle`
 
  a {
     text-decoration: none;
+    color: inherit;
+    font-family: inherit;
  }
 
  button {
@@ -42,6 +44,8 @@ export default createGlobalStyle`
  }
 
  html {
+   scroll-behavior: smooth;
+   
    &::-webkit-scrollbar{
       width: 10px;
    }

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 interface styleProps {
-  active: boolean;
+  $active: boolean;
 }
 
 export const header = styled.header`
@@ -11,6 +11,11 @@ export const header = styled.header`
   padding: 2vh 10%;
 
   box-shadow: 0 -10px 25px var(--aqua);
+  background-color: var(--black);
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
 `;
 
 export const ul = styled.ul`
@@ -37,7 +42,7 @@ export const li = styled.li<styleProps>`
   }
 
   ${(props) =>
-    props.active &&
+    props.$active &&
     css`
       cursor: pointer;
 

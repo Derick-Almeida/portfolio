@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface CardStyleProps {
-  img: string;
+  $img: string;
 }
 
 export const li = styled.li<CardStyleProps>`
@@ -10,7 +10,7 @@ export const li = styled.li<CardStyleProps>`
   height: 35vh;
   width: 48%;
 
-  background: url(${(props) => props.img}) top no-repeat;
+  background: url(${(props) => props.$img}) top no-repeat;
   background-size: cover;
 
   position: relative;

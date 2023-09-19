@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const container = styled.div`
-  padding: 0 10% 10rem 10%;
+  padding: 5rem 10%;
 `;
 
 export const box = styled.div`
