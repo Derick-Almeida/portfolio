@@ -1,8 +1,7 @@
 import styled, { css } from "styled-components";
-import { colorChange } from "../../animations";
 
 interface styleProps {
-  active: boolean;
+  $active: boolean;
 }
 
 export const header = styled.header`
@@ -12,7 +11,11 @@ export const header = styled.header`
   padding: 2vh 10%;
 
   box-shadow: 0 -10px 25px var(--aqua);
-  animation: ${colorChange} 10s linear infinite;
+  background-color: var(--black);
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
 `;
 
 export const ul = styled.ul`
@@ -39,7 +42,7 @@ export const li = styled.li<styleProps>`
   }
 
   ${(props) =>
-    props.active &&
+    props.$active &&
     css`
       cursor: pointer;
 

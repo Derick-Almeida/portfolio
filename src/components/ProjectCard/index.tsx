@@ -7,7 +7,7 @@ import { IProjectProps } from "../../types";
 
 export const ProjectCard = ({ title, image, hasFrontend, github, site }: IProjectProps) => {
   return (
-    <S.li img={image}>
+    <S.li $img={image}>
       <S.div>
         <S.h2>{title}</S.h2>
 

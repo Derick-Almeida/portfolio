@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { colorChange } from "../../animations";
 
 export const container = styled.div`
-  padding: 0 10% 5rem 10%;
+  padding: 5rem 10%;
 `;
 
 export const box = styled.div`
+  margin-top: 5rem;
+
   display: grid;
   grid-template-areas:
     ". . image . ."
@@ -19,5 +20,4 @@ export const box = styled.div`
 export const img = styled.img`
   grid-area: image;
   width: 100%;
-  animation: ${colorChange} 10s linear infinite;
 `;

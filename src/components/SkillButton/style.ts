@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colorChange } from "../../animations";
 
 export const span = styled.span`
   color: var(--white);
@@ -15,7 +14,6 @@ export const span = styled.span`
   justify-content: center;
   align-items: center;
 
-  animation: ${colorChange} 10s linear infinite;
   transition: 0.4s;
 
   &:hover {

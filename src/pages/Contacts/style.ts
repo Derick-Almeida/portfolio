@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colorChange } from "../../animations";
 
 export const container = styled.div`
   color: var(--white);
@@ -7,6 +6,7 @@ export const container = styled.div`
 
 export const div = styled.div`
   padding: 0 10%;
+  margin-top: -5rem;
 
   display: flex;
   justify-content: space-between;
@@ -15,7 +15,6 @@ export const div = styled.div`
 
 export const img = styled.img`
   width: 50%;
-  animation: ${colorChange} 10s linear infinite;
 `;
 
 export const ul = styled.ul`
@@ -34,7 +33,6 @@ export const li = styled.li`
   border-bottom: 1px solid transparent;
 
   transition: 0.4s;
-  animation: ${colorChange} 10s linear infinite;
 
   &:hover {
     color: var(--aqua);

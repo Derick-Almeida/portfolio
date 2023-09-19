@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colorChange } from "../../animations";
 
 export const footer = styled.footer`
   color: var(--white);
@@ -13,5 +12,4 @@ export const footer = styled.footer`
   align-items: center;
 
   box-shadow: 0 10px 20px var(--aqua);
-  animation: ${colorChange} 10s linear infinite;
 `;
