@@ -1,7 +1,8 @@
 import * as S from "./style";
+import { Container } from "../../style/style";
 
 const Contacts = () => {
-  return <S.container></S.container>;
+  return <Container id="contacts"></Container>;
 };
 
 export default Contacts;

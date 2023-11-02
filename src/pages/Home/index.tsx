@@ -1,11 +1,8 @@
 import * as S from "./style";
+import { Container } from "../../style/style";
 
 const Home = () => {
-  return (
-    <S.container>
-      <S.box></S.box>
-    </S.container>
-  );
+  return <Container id="home"></Container>;
 };
 
 export default Home;

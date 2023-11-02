@@ -57,7 +57,7 @@ export default createGlobalStyle`
    }
    
    &::-webkit-scrollbar-thumb{
-      background-color: var(--white);
+      background-color: var(--grey);
       border-radius: 50px;
    }
  }

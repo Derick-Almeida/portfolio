@@ -1,63 +1,64 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import * as S from "./style";
 
 import {
   AiOutlineHome,
-  AiOutlineGithub,
   AiOutlineRadarChart,
+  AiOutlineGithub,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 
-const NavBar = () => {
-  const [activeLink, setActiveLink] = useState<string>("home");
+const secElements = [
+  { name: "home", icon: <AiOutlineHome /> },
+  { name: "skills", icon: <AiOutlineRadarChart /> },
+  { name: "projects", icon: <AiOutlineGithub /> },
+  { name: "contacts", icon: <AiOutlineWhatsApp /> },
+];
+
+interface INavBarProps {
+  sections: HTMLElement[];
+}
+
+const NavBar = ({ sections }: INavBarProps) => {
+  const [listItems, setListItems] = useState<HTMLElement[]>([]);
+  const list = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    if (list.current) {
+      setListItems([...list.current.children] as HTMLElement[]);
+      [...list.current.children][0].classList.add("active");
+    }
+
+    return () => {};
+  }, []);
+
+  window.onscroll = () => {
+    sections.forEach((section, index) => {
+      const top = window.scrollY;
+      const offset = section.offsetTop - 60;
+      const height = section.offsetHeight;
+
+      if (top >= offset && top < offset + height) {
+        [...listItems].forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        listItems[index].classList.add("active");
+      }
+    });
+  };
 
   return (
     <S.header>
-      <S.ul>
-        <S.li
-          className={activeLink === "home" ? "active" : ""}
-          onClick={() => setActiveLink("home")}
-        >
-          <S.a href="#home">
-            <S.icon>
-              <AiOutlineHome />
-            </S.icon>
-            <S.span>home</S.span>
-          </S.a>
-        </S.li>
-        <S.li
-          className={activeLink === "skills" ? "active" : ""}
-          onClick={() => setActiveLink("skills")}
-        >
-          <S.a href="#skills">
-            <S.icon>
-              <AiOutlineRadarChart />
-            </S.icon>
-            <S.span>skills</S.span>
-          </S.a>
-        </S.li>
-        <S.li
-          className={activeLink === "projects" ? "active" : ""}
-          onClick={() => setActiveLink("projects")}
-        >
-          <S.a href="#projects">
-            <S.icon>
-              <AiOutlineGithub />
-            </S.icon>
-            <S.span>projects</S.span>
-          </S.a>
-        </S.li>
-        <S.li
-          className={activeLink === "contacts" ? "active" : ""}
-          onClick={() => setActiveLink("contacts")}
-        >
-          <S.a href="#contacts">
-            <S.icon>
-              <AiOutlineWhatsApp />
-            </S.icon>
-            <S.span>contacts</S.span>
-          </S.a>
-        </S.li>
+      <S.ul ref={list}>
+        {secElements.map((sec) => (
+          <S.li key={sec.name}>
+            <S.a href={`#${sec.name}`}>
+              <S.icon>{sec.icon}</S.icon>
+              <S.span>{sec.name}</S.span>
+            </S.a>
+          </S.li>
+        ))}
       </S.ul>
     </S.header>
   );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const header = styled.header`
-  position: absolute;
+  position: fixed;
   left: 0;
 
   width: 100px;
@@ -75,6 +75,8 @@ export const span = styled.span`
   left: 80px;
 
   font-size: 1.5rem;
+  font-family: var(--shrikhand);
+  font-weight: 400;
 
   color: var(--bg);
   background: var(--aqua);
