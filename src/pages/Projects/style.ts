@@ -1,25 +1,9 @@
 import styled from "styled-components";
 
-export const container = styled.div`
-  padding: 5rem 10%;
-`;
+export const container = styled.div``;
 
-export const box = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 5rem;
-`;
+export const box = styled.div``;
 
-export const div = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 48%;
-`;
+export const div = styled.div``;
 
-export const img = styled.img`
-  width: 60%;
-`;
+export const img = styled.img``;

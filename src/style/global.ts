@@ -9,11 +9,17 @@ export default createGlobalStyle`
  }
 
  :root {
-    --opaque: #00000080;
     --black: #000000;
     --white: #FFFFFF;
     --grey: #AAAAAA;
     --aqua: #00FFFF;
+    --bg: #2f363e;
+
+    --black-opaque-1: #00000040;
+    --black-opaque-2: #00000080;
+    --black-opaque-3: #000000bf;
+    --white-opaque-1: #ffffff33;
+    --white-opaque-2: #ffffff40;
 
     --days-one: 'Days One', sans-serif;
     --inter: 'Inter', sans-serif;
@@ -40,7 +46,7 @@ export default createGlobalStyle`
    max-width: 100%;
    min-height: 100vh;
    overflow: hidden auto;
-   background-color: var(--black);
+   background-color: var(--bg);
  }
 
  html {

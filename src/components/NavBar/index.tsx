@@ -1,24 +1,63 @@
 import { useState } from "react";
 import * as S from "./style";
 
+import {
+  AiOutlineHome,
+  AiOutlineGithub,
+  AiOutlineRadarChart,
+  AiOutlineWhatsApp,
+} from "react-icons/ai";
+
 const NavBar = () => {
-  const [page, setPage] = useState("#");
+  const [activeLink, setActiveLink] = useState<string>("home");
 
   return (
     <S.header>
       <S.ul>
-        <a href="#" onClick={() => setPage("#")}>
-          <S.li $active={page === "#" ? true : false}>home</S.li>
-        </a>
-        <a href="#skills" onClick={() => setPage("#skills")}>
-          <S.li $active={page === "#skills" ? true : false}>skills</S.li>
-        </a>
-        <a href="#projects" onClick={() => setPage("#projects")}>
-          <S.li $active={page === "#projects" ? true : false}>projects</S.li>
-        </a>
-        <a href="#contacts" onClick={() => setPage("#contacts")}>
-          <S.li $active={page === "#contacts" ? true : false}>contacts</S.li>
-        </a>
+        <S.li
+          className={activeLink === "home" ? "active" : ""}
+          onClick={() => setActiveLink("home")}
+        >
+          <S.a href="#home">
+            <S.icon>
+              <AiOutlineHome />
+            </S.icon>
+            <S.span>home</S.span>
+          </S.a>
+        </S.li>
+        <S.li
+          className={activeLink === "skills" ? "active" : ""}
+          onClick={() => setActiveLink("skills")}
+        >
+          <S.a href="#skills">
+            <S.icon>
+              <AiOutlineRadarChart />
+            </S.icon>
+            <S.span>skills</S.span>
+          </S.a>
+        </S.li>
+        <S.li
+          className={activeLink === "projects" ? "active" : ""}
+          onClick={() => setActiveLink("projects")}
+        >
+          <S.a href="#projects">
+            <S.icon>
+              <AiOutlineGithub />
+            </S.icon>
+            <S.span>projects</S.span>
+          </S.a>
+        </S.li>
+        <S.li
+          className={activeLink === "contacts" ? "active" : ""}
+          onClick={() => setActiveLink("contacts")}
+        >
+          <S.a href="#contacts">
+            <S.icon>
+              <AiOutlineWhatsApp />
+            </S.icon>
+            <S.span>contacts</S.span>
+          </S.a>
+        </S.li>
       </S.ul>
     </S.header>
   );

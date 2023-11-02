@@ -1,53 +1,167 @@
-import styled, { css } from "styled-components";
-
-interface styleProps {
-  $active: boolean;
-}
+import styled from "styled-components";
 
 export const header = styled.header`
+  position: absolute;
+  left: 0;
+
+  width: 100px;
+  height: 100%;
+
   color: var(--white);
-  text-transform: capitalize;
-  font-size: 1.6rem;
-  padding: 2vh 10%;
-
-  box-shadow: 0 -10px 25px var(--aqua);
-  background-color: var(--black);
-
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  background: var(--bg);
+  box-shadow: 25px 25px 75px var(--black-opaque-1), 10px 10px 70px var(--black-opaque-1),
+    inset 5px 5px 10px var(--black-opaque-2), inset 5px 5px 20px var(--white-opaque-1),
+    inset -5px -5px 15px var(--black-opaque-3);
 `;
 
 export const ul = styled.ul`
+  height: 100%;
+
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 10px;
 `;
 
-export const li = styled.li<styleProps>`
-  font-family: var(--shrikhand);
-  font-style: italic;
-  font-weight: bold;
+export const a = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
 
-  -webkit-text-stroke: 1px var(--black);
+export const icon = styled.span`
+  position: absolute;
 
-  transition: 0.4s;
+  color: var(--grey);
+  font-size: 1.75em;
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+
+    background: var(--bg);
+    border-radius: 50%;
+    box-shadow: 5px 5px 7px var(--black-opaque-1), inset 2px 2px 3px var(--white-opaque-2),
+      inset -3px -3px 5px var(--black-opaque-2);
+
+    transform: scale(0);
+    transition: 0.5s;
+  }
+
+  > svg {
+    position: relative;
+    z-index: 9;
+  }
+`;
+
+export const span = styled.span`
+  text-transform: capitalize;
+
+  position: absolute;
+  left: 80px;
+
+  font-size: 1.5rem;
+
+  color: var(--bg);
+  background: var(--aqua);
+  box-shadow: 5px 5px 7px var(--black-opaque-1), inset -3px -3px 5px var(--black-opaque-2);
+
+  padding: 4px 15px;
+  border-radius: 15px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -4px;
+
+    width: 10px;
+    height: 10px;
+
+    transform: translateY(-50%) rotate(45deg);
+    border-radius: 2px;
+    background: var(--aqua);
+  }
+`;
+
+export const li = styled.li`
+  position: relative;
+
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  margin: 0 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 2.5px);
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+    transition: 0.5s;
+  }
 
   &:hover {
     cursor: pointer;
 
-    text-shadow: 0 0 15px var(--aqua), 0 0 5px var(--aqua);
-    -webkit-text-stroke: 1px var(--aqua);
-    color: var(--black);
+    ${icon} {
+      color: var(--aqua);
+    }
+
+    ${span} {
+      opacity: 1;
+      visibility: visible;
+      left: 100px;
+    }
   }
 
-  ${(props) =>
-    props.$active &&
-    css`
-      cursor: pointer;
+  &.active {
+    ${icon} {
+      transform: translateX(45px);
 
-      text-shadow: 0 0 15px var(--aqua), 0 0 5px var(--aqua);
-      -webkit-text-stroke: 1px var(--aqua);
-      color: var(--black);
-    `}
+      background: var(--aqua);
+      color: var(--white);
+      box-shadow: 5px 5px 7px var(--black-opaque-1), inset 2px 2px 3px var(--white-opaque-2),
+        inset -3px -3px 5px var(--black-opaque-2);
+
+      &::before {
+        transform: scale(1);
+      }
+    }
+
+    &:hover ${span} {
+      opacity: 1;
+      visibility: visible;
+      left: 140px;
+    }
+  }
+
+  &.active::before {
+    background: var(--aqua);
+    box-shadow: 0 0 5px var(--aqua), 0 0 10px var(--aqua), 0 0 20px var(--aqua),
+      0 0 30px var(--aqua), 0 0 40px var(--aqua), 0 0 50px var(--aqua);
+  }
 `;
