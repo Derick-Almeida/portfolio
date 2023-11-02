@@ -69,6 +69,7 @@ export const icon = styled.span`
 
 export const span = styled.span`
   text-transform: capitalize;
+  pointer-events: none;
 
   position: absolute;
   left: 80px;
