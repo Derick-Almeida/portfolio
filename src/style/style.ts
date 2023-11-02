@@ -6,8 +6,6 @@ export const Container = styled.section`
 
   padding-left: 150px;
 
-  background: linear-gradient(-45deg, #0ff, #f0f, #ff0, #0f0);
-
   display: flex;
   justify-content: center;
   align-items: center;

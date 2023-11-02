@@ -35,7 +35,7 @@ const NavBar = ({ sections }: INavBarProps) => {
   window.onscroll = () => {
     sections.forEach((section, index) => {
       const top = window.scrollY;
-      const offset = section.offsetTop - 60;
+      const offset = section.offsetTop - window.innerHeight / 2;
       const height = section.offsetHeight;
 
       if (top >= offset && top < offset + height) {

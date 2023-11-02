@@ -9,14 +9,19 @@ import Contacts from "./pages/Contacts";
 
 function App() {
   const [sections, setSections] = useState<HTMLElement[]>([]);
+
   const list = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (list.current) {
       setSections([...list.current.children] as HTMLElement[]);
     }
-    window.scrollTo(0, 0);
   }, []);
+
+  window.onload = () => {
+    history.replaceState(null, "", "/");
+    window.scrollTo(0, 0);
+  };
 
   return (
     <>
