@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const box = styled.div``;
-
-export const img = styled.img``;
+export const container = styled.div`
+  padding: 1.5rem 2rem;
+`;

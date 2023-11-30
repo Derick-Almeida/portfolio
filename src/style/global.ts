@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import hexagon from "../assets/hex_bg.jpg";
 
 export default createGlobalStyle`
  * {
@@ -11,15 +12,14 @@ export default createGlobalStyle`
  :root {
     --black: #000000;
     --white: #FFFFFF;
-    --grey: #AAAAAA;
-    --aqua: #00FFFF;
-    --bg: #2f363e;
-
-    --black-opaque-1: #00000040;
-    --black-opaque-2: #00000080;
-    --black-opaque-3: #000000bf;
-    --white-opaque-1: #ffffff33;
-    --white-opaque-2: #ffffff40;
+    
+    --main-color: #00abf0;
+    --text-color: #333333;
+    --secod-text-color: #555555;
+    --page-color-left: linear-gradient(90deg, #ffffff, #dddddd);
+    --page-color-right: linear-gradient(270deg, #ffffff, #dddddd);
+    --border: .125rem solid #00abf0;
+    --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
 
     --days-one: 'Days One', sans-serif;
     --inter: 'Inter', sans-serif;
@@ -45,20 +45,20 @@ export default createGlobalStyle`
    min-width: 100%;
    max-width: 100%;
    min-height: 100vh;
-   overflow: hidden auto;
-   background-color: var(--bg);
+   overflow: hidden;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   background: url(${hexagon}) no-repeat center;
+   background-size: cover;
  }
 
  html {
-   scroll-behavior: smooth;
-   
-   &::-webkit-scrollbar{
-      width: 10px;
-   }
-   
-   &::-webkit-scrollbar-thumb{
-      background-color: var(--grey);
-      border-radius: 50px;
+   ::selection{
+      /* background: var(--grey);
+      color: var(--white); */
    }
  }
 `;

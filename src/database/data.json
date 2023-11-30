@@ -17,15 +17,15 @@
     "Prisma",
     "TypeORM"
   ],
+  "latestProject": {
+    "id": "92b24da1-76d7-4dc6-a17f-f14ade23baef",
+    "title": "Shop Now",
+    "image": "https://i.imgur.com/fRMWitY.png",
+    "github": "https://github.com/Derick-Almeida/shop_now-react-ts",
+    "site": "https://shop-now-dk.vercel.app/",
+    "hasFrontend": true
+  },
   "projects": [
-    {
-      "id": "92b24da1-76d7-4dc6-a17f-f14ade23baef",
-      "title": "Shop Now",
-      "image": "https://i.imgur.com/fRMWitY.png",
-      "github": "https://github.com/Derick-Almeida/shop_now-react-ts",
-      "site": "https://shop-now-dk.vercel.app/",
-      "hasFrontend": true
-    },
     {
       "id": "fa9a2513-444f-470b-84c1-2596ae4b69b3",
       "title": "Project Manager",

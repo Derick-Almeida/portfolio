@@ -1,8 +1,7 @@
 import * as S from "./style";
-import { Container } from "../../style/style";
 
 const Skills = () => {
-  return <Container id="skills"></Container>;
+  return <S.container>Skills</S.container>;
 };
 
 export default Skills;
