@@ -1,10 +1,16 @@
 import { IButtonProps } from "../../types";
 import * as S from "./style";
 
-const Button = ({ children, ...props }: IButtonProps) => {
+const Button = ({ children, link, fileName, variant = "default", ...props }: IButtonProps) => {
   return (
-    <S.button {...props}>
-      <S.p>{children}</S.p>
+    <S.button {...props} variant={variant}>
+      {link ? (
+        <a href={link} download={fileName}>
+          {children}
+        </a>
+      ) : (
+        <>{children}</>
+      )}
     </S.button>
   );
 };

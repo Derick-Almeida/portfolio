@@ -18,7 +18,7 @@ export default createGlobalStyle`
     --secod-text-color: #555555;
     --page-color-left: linear-gradient(90deg, #ffffff, #dddddd);
     --page-color-right: linear-gradient(270deg, #ffffff, #dddddd);
-    --border: .125rem solid #00abf0;
+    --border: .125rem solid var(--main-color);
     --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
 
     --days-one: 'Days One', sans-serif;

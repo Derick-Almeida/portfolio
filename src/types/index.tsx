@@ -4,7 +4,13 @@ export interface IChildrenProps {
   children: ReactNode;
 }
 
-export type IButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+type ButtonTypes = "default" | "outlined" | "contained";
+
+export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  link?: string;
+  fileName?: string;
+  variant?: ButtonTypes;
+}
 
 export interface IProjectProps {
   id: string;
