@@ -15,7 +15,7 @@ export default createGlobalStyle`
     
     --main-color: #00abf0;
     --text-color: #333333;
-    --secod-text-color: #555555;
+    --second-text-color: #555555;
     --page-color-left: linear-gradient(90deg, #ffffff, #dddddd);
     --page-color-right: linear-gradient(270deg, #ffffff, #dddddd);
     --border: .125rem solid var(--main-color);
