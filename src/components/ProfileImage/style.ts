@@ -11,6 +11,7 @@ export const container = styled.div`
   max-height: 12rem;
 
   position: relative;
+  user-select: none;
   transition: border-color 0.6s;
 
   &::after {

@@ -20,3 +20,10 @@ export interface IProjectProps {
   site: string;
   hasFrontend: boolean;
 }
+
+export interface IDateCardProps {
+  startYear: string;
+  endYear: string;
+  title: string;
+  children: ReactNode;
+}

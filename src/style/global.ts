@@ -56,9 +56,13 @@ export default createGlobalStyle`
  }
 
  html {
-   ::selection{
-      /* background: var(--grey);
-      color: var(--white); */
+   ::-webkit-scrollbar {
+      width: 10px;
+   }
+   
+   ::-webkit-scrollbar-thumb {
+      border-radius: 50px;
+      background-color: #DDDDDD;
    }
  }
 `;

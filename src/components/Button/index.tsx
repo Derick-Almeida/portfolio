@@ -1,5 +1,6 @@
-import { IButtonProps } from "../../types";
 import * as S from "./style";
+
+import { IButtonProps } from "../../types";
 
 const Button = ({ children, link, fileName, variant = "default", ...props }: IButtonProps) => {
   return (
