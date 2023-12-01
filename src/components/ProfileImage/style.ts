@@ -11,6 +11,7 @@ export const container = styled.div`
   max-height: 12rem;
 
   position: relative;
+  transition: border-color 0.6s;
 
   &::after {
     content: "";
@@ -27,6 +28,7 @@ export const container = styled.div`
     border-bottom: 0.5rem solid var(--main-color);
 
     transform: rotate(-35deg);
+    transition: border-color 0.6s;
   }
 `;
 

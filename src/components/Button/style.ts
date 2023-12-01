@@ -12,7 +12,7 @@ export const button = styled.button<IButtonStyleProps>`
   font-size: 1rem;
   font-weight: 600;
 
-  transition: background-color 0.6s, color 0.6s;
+  transition: background-color 0.6s, color 0.6s, border-color 0.6s;
 
   ${({ variant }) => {
     switch (variant) {
