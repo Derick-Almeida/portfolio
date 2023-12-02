@@ -8,6 +8,10 @@ export const card = styled.li`
   padding-bottom: 1.5rem;
   position: relative;
 
+  &:last-child {
+    padding-bottom: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;

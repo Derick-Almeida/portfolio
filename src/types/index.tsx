@@ -27,3 +27,11 @@ export interface IDateCardProps {
   title: string;
   children: ReactNode;
 }
+
+type DirectionTypes = "left" | "right";
+
+export interface INavigationProps {
+  numberPage: string;
+  direction: DirectionTypes;
+  pageTurnId: string;
+}

@@ -5,7 +5,29 @@ import Button from "../../components/Button";
 import cv from "../../assets/C.V._Full-Stack.pdf";
 import ProfileImage from "../../components/ProfileImage";
 
-const Profile = () => {
+interface IPRofileProps {
+  bookReference: React.RefObject<HTMLDivElement>;
+}
+
+const Profile = ({ bookReference }: IPRofileProps) => {
+  const contactMe = () => {
+    if (bookReference.current) {
+      const pages = [...bookReference.current.querySelectorAll(".page-right")];
+      pages.pop();
+
+      pages.forEach((page, index) => {
+        setTimeout(() => {
+          page.classList.add("turn");
+
+          setTimeout(() => {
+            const typingPage = page as HTMLElement;
+            typingPage.style.zIndex = `${10 + index}`;
+          }, 500);
+        }, (index + 1) * 100);
+      });
+    }
+  };
+
   return (
     <S.container>
       <ProfileImage />
@@ -24,7 +46,9 @@ const Profile = () => {
         <Button variant="contained" link={cv} fileName="C.V._Dérick_Silva.pdf">
           Dowload CV
         </Button>
-        <Button variant="outlined">Contact Me</Button>
+        <Button variant="outlined" onClick={contactMe}>
+          Contact Me
+        </Button>
       </S.buttonsContainer>
     </S.container>
   );

@@ -1,6 +1,7 @@
 import * as S from "./style";
 
 import DateCard from "../../components/DateCard";
+import Navigation from "../../components/Navigation";
 
 const WorkExperience = () => {
   return (
@@ -20,6 +21,8 @@ const WorkExperience = () => {
           non iste est vero distinctio officia?
         </DateCard>
       </S.ul>
+
+      <Navigation numberPage="1" direction="right" pageTurnId="turn-1" />
     </S.container>
   );
 };
