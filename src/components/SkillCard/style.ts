@@ -29,9 +29,11 @@ export const li = styled.li`
   &:hover {
     color: var(--white);
     background-color: var(--main-color);
+    transition: color 0s, background-color 0s;
 
     ${p} {
       color: var(--white);
+      transition: color 0s;
     }
   }
 `;

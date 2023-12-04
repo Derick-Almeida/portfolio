@@ -43,7 +43,7 @@ const Profile = ({ bookReference }: IPRofileProps) => {
       </S.p>
 
       <S.buttonsContainer>
-        <Button variant="contained" link={cv} fileName="C.V._Dérick_Silva.pdf">
+        <Button variant="contained" link={cv} download fileName="C.V._Dérick_Silva.pdf">
           Dowload CV
         </Button>
         <Button variant="outlined" onClick={contactMe}>
