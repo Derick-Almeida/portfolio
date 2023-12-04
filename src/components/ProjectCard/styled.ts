@@ -58,6 +58,24 @@ export const card = styled.li`
     }
   }
 
+  &:not(:hover) {
+    ${div} {
+      background-color: transparent;
+      transition: background-color 0.6s;
+
+      > p {
+        transform: scale(0);
+        transition: transform 0.6s;
+      }
+    }
+
+    > a img {
+      transform: scale(1);
+      filter: blur(0);
+      transition: transform 0.6s, filter 0.6s;
+    }
+  }
+
   > a img {
     width: 100%;
     height: 100%;
