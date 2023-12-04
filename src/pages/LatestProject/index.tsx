@@ -30,7 +30,9 @@ const LatestProject = () => {
         <Button variant="contained" link={project.github}>
           Source Code
         </Button>
-        <Button variant="outlined">More Projects</Button>
+        <Button variant="outlined" link="https://github.com/Derick-Almeida">
+          More Projects
+        </Button>
       </S.buttonsContainer>
       <Navigation numberPage="4" direction="left" pageTurnId="turn-2" />
     </S.container>
