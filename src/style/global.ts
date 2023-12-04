@@ -12,6 +12,7 @@ export default createGlobalStyle`
  :root {
     --black: #000000;
     --white: #FFFFFF;
+    --opaque: rgba(0, 0, 0, .5);
     
     --main-color: #00abf0;
     --text-color: #333333;

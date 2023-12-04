@@ -16,6 +16,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export interface IProjectProps {
   id: string;
+  title: string;
   image: string;
   github: string;
 }
