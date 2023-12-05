@@ -69,7 +69,7 @@ const Book = () => {
         </S.page>
 
         <S.page className="page-back">
-          <Contacts />
+          <Contacts bookReference={container} />
         </S.page>
       </S.bookPage>
 

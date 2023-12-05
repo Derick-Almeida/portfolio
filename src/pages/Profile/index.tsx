@@ -5,11 +5,11 @@ import Button from "../../components/Button";
 import cv from "../../assets/C.V._Full-Stack.pdf";
 import ProfileImage from "../../components/ProfileImage";
 
-interface IPRofileProps {
+interface IProfileProps {
   bookReference: React.RefObject<HTMLDivElement>;
 }
 
-const Profile = ({ bookReference }: IPRofileProps) => {
+const Profile = ({ bookReference }: IProfileProps) => {
   const contactMe = () => {
     if (bookReference.current) {
       const pages = [...bookReference.current.querySelectorAll(".page-right")];
@@ -21,7 +21,7 @@ const Profile = ({ bookReference }: IPRofileProps) => {
 
           setTimeout(() => {
             const typingPage = page as HTMLElement;
-            typingPage.style.zIndex = `${10 + index}`;
+            typingPage.style.zIndex = `${20 + index}`;
           }, 500);
         }, (index + 1) * 100);
       });
