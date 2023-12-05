@@ -19,16 +19,7 @@ const Contacts = ({ bookReference }: IContactProps) => {
     e.preventDefault();
 
     if (form.current) {
-      emailjs
-        .sendForm("service_48s5vli", "template_msi9q4y", form.current, "s-9GhQY4lIEemJGR_")
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+      emailjs.sendForm("service_48s5vli", "template_msi9q4y", form.current, "s-9GhQY4lIEemJGR_");
     }
   };
 

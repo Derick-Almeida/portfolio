@@ -8,11 +8,21 @@ export const button = styled.button<IButtonStyleProps>`
   padding: 0.8rem 1.2rem;
   border: var(--border);
   border-radius: 0.3rem;
+  position: relative;
 
   font-size: 1rem;
   font-weight: 600;
 
   transition: background-color 0.6s, color 0.6s, border-color 0.6s;
+
+  > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+  }
 
   ${({ variant }) => {
     switch (variant) {

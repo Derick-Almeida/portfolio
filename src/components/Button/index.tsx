@@ -13,13 +13,15 @@ const Button = ({
   return (
     <S.button {...props} variant={variant}>
       {link && download ? (
-        <a href={link} download={fileName}>
+        <>
+          <a href={link} download={fileName}></a>
           {children}
-        </a>
+        </>
       ) : link ? (
-        <a href={link} target="_blank">
+        <>
+          <a href={link} target="_blank"></a>
           {children}
-        </a>
+        </>
       ) : (
         <>{children}</>
       )}
