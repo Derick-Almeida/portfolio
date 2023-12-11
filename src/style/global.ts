@@ -19,12 +19,33 @@ export default createGlobalStyle`
     --border: .125rem solid var(--main-color);
     --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
 
+    --transition: .6s;
+
     --days-one: 'Days One', sans-serif;
     --inter: 'Inter', sans-serif;
-    --monoton: 'Monoton', cursive;
     --shrikhand: 'Shrikhand', cursive;
  }
 
+ body {
+   min-width: 100%;
+   max-width: 100%;
+   min-height: 100vh;
+   overflow-x: hidden;
+
+   background-color: #FFF;
+ }
+
+ html {
+   ::-webkit-scrollbar {
+      width: 10px;
+   }
+   
+   ::-webkit-scrollbar-thumb {
+      border-radius: 50px;
+      background-color: #DDDDDD;
+   }
+ }
+ 
  a {
     text-decoration: none;
     color: inherit;
@@ -39,27 +60,4 @@ export default createGlobalStyle`
     list-style: none;
  }
 
- body {
-   min-width: 100%;
-   max-width: 100%;
-   min-height: 100vh;
-   overflow: hidden;
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
-
-   background-color: #222;
- }
-
- html {
-   ::-webkit-scrollbar {
-      width: 10px;
-   }
-   
-   ::-webkit-scrollbar-thumb {
-      border-radius: 50px;
-      background-color: #DDDDDD;
-   }
- }
 `;

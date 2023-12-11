@@ -25,3 +25,11 @@ export interface ISkillProps {
   name: string;
   icon: IconType;
 }
+
+export interface INavBarMobileProps {
+  sections: string[];
+  currentLink: string;
+  setCurrentLink: (e: string) => void;
+  meuOpen: boolean;
+  setMenuOpen: (e: boolean) => void;
+}
