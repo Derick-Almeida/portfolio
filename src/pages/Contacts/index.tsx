@@ -1,18 +1,11 @@
-import * as S from "./style";
-
-import Navigation from "../../components/Navigation";
-import Button from "../../components/Button";
-
+import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-import { FaUser } from "react-icons/fa6";
-import { useRef } from "react";
+import * as S from "./style";
 
-interface IContactProps {
-  bookReference: React.RefObject<HTMLDivElement>;
-}
+import Button from "../../components/Button";
 
-const Contacts = ({ bookReference }: IContactProps) => {
+const Contacts = () => {
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.SyntheticEvent) => {
@@ -23,23 +16,6 @@ const Contacts = ({ bookReference }: IContactProps) => {
     }
   };
 
-  const backProfile = () => {
-    if (bookReference.current) {
-      const pages = [...bookReference.current.querySelectorAll(".page-right")];
-      pages.pop();
-
-      pages.reverse().forEach((page, index) => {
-        setTimeout(() => {
-          page.classList.remove("turn");
-
-          setTimeout(() => {
-            const typingPage = page as HTMLElement;
-            typingPage.style.zIndex = `${20 + index}`;
-          }, 500);
-        }, (index + 1) * 100);
-      });
-    }
-  };
   return (
     <S.container>
       <S.h1>Contacts</S.h1>
@@ -59,13 +35,6 @@ const Contacts = ({ bookReference }: IContactProps) => {
           Send Message
         </Button>
       </S.form>
-
-      <S.span onClick={backProfile}>
-        <S.p>profile</S.p>
-        <FaUser />
-      </S.span>
-
-      <Navigation numberPage="6" direction="left" pageTurnId="turn-3" />
     </S.container>
   );
 };

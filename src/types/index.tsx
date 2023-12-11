@@ -18,22 +18,7 @@ export interface IProjectProps {
   id: string;
   title: string;
   image: string;
-  github: string;
-}
-
-export interface IDateCardProps {
-  startYear: string;
-  endYear: string;
-  title: string;
-  children: ReactNode;
-}
-
-type DirectionTypes = "left" | "right";
-
-export interface INavigationProps {
-  numberPage: string;
-  direction: DirectionTypes;
-  pageTurnId: string;
+  link: string;
 }
 
 export interface ISkillProps {

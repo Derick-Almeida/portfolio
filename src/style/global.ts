@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import hexagon from "../assets/hex_bg.jpg";
 
 export default createGlobalStyle`
  * {
@@ -17,8 +16,6 @@ export default createGlobalStyle`
     --main-color: #00abf0;
     --text-color: #333333;
     --second-text-color: #555555;
-    --page-color-left: linear-gradient(90deg, #ffffff, #dddddd);
-    --page-color-right: linear-gradient(270deg, #ffffff, #dddddd);
     --border: .125rem solid var(--main-color);
     --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
 
@@ -52,8 +49,7 @@ export default createGlobalStyle`
    justify-content: center;
    align-items: center;
 
-   background: url(${hexagon}) no-repeat center;
-   background-size: cover;
+   background-color: #222;
  }
 
  html {
