@@ -23,6 +23,7 @@ const NavBarMobile = ({
         <S.nav>
           {sections.map((sec, index) => (
             <S.a
+              content={sec}
               key={index}
               className={currentLink == sec ? "current" : ""}
               href={`#${sec}`}

@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { SettingsContext } from "./contexts/settings.context";
 import GlobalStyle from "./style/global";
 
 import NavBar from "./components/NavBar";
@@ -6,9 +8,11 @@ import Footer from "./components/Footer";
 import Settings from "./components/Settings";
 
 function App() {
+  const { themeColor } = useContext(SettingsContext);
+
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle themeColor={themeColor} />
 
       <NavBar />
       <Settings />

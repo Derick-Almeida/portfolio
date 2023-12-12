@@ -71,7 +71,6 @@ export const nav = styled.nav`
 `;
 
 export const a = styled.a`
-  text-transform: capitalize;
   color: var(--text-color);
   font-weight: 600;
   font-size: 1.3rem;
@@ -85,18 +84,20 @@ export const a = styled.a`
   overflow: hidden;
 
   &::before {
-    content: "";
-    width: 110%;
+    content: attr(content);
+    width: 100%;
     height: 100%;
 
     position: absolute;
-    z-index: -1;
     bottom: 0;
-    right: -20%;
+    left: 0;
 
-    transform: skewX(-70deg) scaleX(0);
+    clip-path: polygon(35% 0, 100% 0%, 100% 100%, 0 100%);
+
+    transform: scaleX(0);
     transform-origin: right;
     background-color: var(--main-color);
+    color: var(--white);
 
     transition: transform 0.4s, background-color var(--transition-color);
   }
@@ -106,7 +107,8 @@ export const a = styled.a`
     letter-spacing: 1rem;
 
     &::before {
-      transform: skewX(-70deg) scaleX(1);
+      transform: scaleX(1);
+      clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
     }
   }
 

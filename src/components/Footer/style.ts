@@ -11,6 +11,7 @@ export const footer = styled.footer`
 
   text-align: center;
   background-color: var(--main-color);
+
   transition: background-color var(--transition-color);
 `;
 

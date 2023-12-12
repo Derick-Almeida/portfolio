@@ -1,6 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-export default createGlobalStyle`
+interface IStyleProps {
+  themeColor: string;
+}
+
+export default createGlobalStyle<IStyleProps>`
  * {
     margin: 0;
     padding: 0;
@@ -13,7 +17,7 @@ export default createGlobalStyle`
     --white: #FFFFFF;
 
     --bg-color: #FFFFFF;
-    --main-color: #00abf0;
+    --main-color: ${({ themeColor }) => themeColor};
     --text-color: #333333;
     --second-text-color: #555555;
 

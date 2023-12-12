@@ -33,3 +33,11 @@ export interface INavBarMobileProps {
   meuOpen: boolean;
   setMenuOpen: (e: boolean) => void;
 }
+
+export interface ISettingsContextProps {
+  theme: string;
+  switchTheme: () => void;
+  themeColor: string;
+  selectThemeColor: (e: string) => void;
+  colors: string[];
+}

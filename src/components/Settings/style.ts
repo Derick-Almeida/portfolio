@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const container = styled.div`
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
   gap: 1rem;
 
   position: fixed;
@@ -39,7 +38,6 @@ export const span = styled.span`
   justify-content: center;
   align-items: center;
 
-  height: 100%;
   padding: 0.5rem;
   border-radius: 0.5rem;
 
@@ -72,15 +70,17 @@ export const ul = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  width: 8rem;
 `;
 
 export const li = styled.li`
   border: var(--border);
+  border-color: var(--text-color);
   border-radius: 50%;
   cursor: pointer;
 
   width: 1.5rem;
   height: 1.5rem;
 
-  transform: border-color var(--transition-color);
+  transition: border-color var(--transition-color);
 `;

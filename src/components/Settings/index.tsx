@@ -1,35 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
+import { SettingsContext } from "../../contexts/settings.context";
+
 import * as S from "./style";
 
 import { LuSun, LuMoon, LuSettings } from "react-icons/lu";
 
 const Settings = () => {
   const [openSettings, setOpenSettings] = useState<boolean>(false);
-  const [theme, setTheme] = useState<string>(
-    (localStorage.getItem("@portfolio:theme") as string) || "light"
-  );
 
-  useEffect(() => {
-    if (localStorage.getItem("@portfolio:theme") !== null) {
-      document.querySelector("html")!.dataset["theme"] = theme;
-      setTheme(localStorage.getItem("@portfolio:theme") as string);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const switchTheme = () => {
-    if (document.querySelector("html") !== null) {
-      if (document.querySelector("html")!.dataset["theme"] === "dark") {
-        document.querySelector("html")!.dataset["theme"] = "light";
-        localStorage.setItem("@portfolio:theme", "light");
-        setTheme("light");
-      } else {
-        document.querySelector("html")!.dataset["theme"] = "dark";
-        localStorage.setItem("@portfolio:theme", "dark");
-        setTheme("dark");
-      }
-    }
-  };
+  const { theme, switchTheme, colors, selectThemeColor } = useContext(SettingsContext);
 
   return (
     <S.container className={openSettings ? "open" : ""}>
@@ -44,10 +23,13 @@ const Settings = () => {
       <S.colors>
         <S.p>Theme Colors</S.p>
         <S.ul>
-          <S.li></S.li>
-          <S.li></S.li>
-          <S.li></S.li>
-          <S.li></S.li>
+          {colors.map((color) => (
+            <S.li
+              key={color}
+              style={{ background: color }}
+              onClick={() => selectThemeColor(color)}
+            ></S.li>
+          ))}
         </S.ul>
       </S.colors>
     </S.container>

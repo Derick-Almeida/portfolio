@@ -7,9 +7,9 @@ import NavBarMobile from "../NavBarMobile";
 import { TfiMenu } from "react-icons/tfi";
 
 const NavBar = () => {
-  const sections = ["home", "skills", "projects", "contact"];
+  const sections = ["Home", "Skills", "Projects", "Contact"];
 
-  const [currentLink, setCurrentLink] = useState<string>("home");
+  const [currentLink, setCurrentLink] = useState<string>("Home");
   const [windowSize, setWindowSize] = useState<number>(0);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
