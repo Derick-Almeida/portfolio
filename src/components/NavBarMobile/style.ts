@@ -10,7 +10,7 @@ export const div = styled.div`
   height: 100vh;
 
   padding: 1rem;
-  background: var(--white);
+  background: var(--bg-color);
 
   > img {
     width: 100%;
@@ -19,7 +19,7 @@ export const div = styled.div`
   }
 
   transform: translateX(100%);
-  transition: transform 0.4s;
+  transition: transform 0.4s, background-color var(--transition-theme);
 
   @media (max-width: 325px) {
     width: 100%;
@@ -27,24 +27,24 @@ export const div = styled.div`
 `;
 
 export const box = styled.div`
-  width: 100%;
+  width: 0%;
   height: 100vh;
 
   position: fixed;
-  top: 0;
+  z-index: -1;
   right: 0;
-  z-index: 1001;
+  top: 0;
 
   display: flex;
   justify-content: right;
-  z-index: -1;
 
   background-color: transparent;
-  transition: background-color 0.4s, z-index 0.4s;
+  transition: background-color 0.4s, z-index 0.4s, width 0.4s;
 
   &.open {
-    background-color: var(--opaque);
+    width: 100%;
     z-index: 9;
+    background-color: var(--opaque);
 
     > ${div} {
       transform: translateX(0);
@@ -58,6 +58,8 @@ export const span = styled.span`
 
   color: var(--text-color);
   font-size: 2rem;
+
+  transition: color var(--transition-theme);
 `;
 
 export const nav = styled.nav`
@@ -78,7 +80,7 @@ export const a = styled.a`
   z-index: 2;
   width: 100%;
 
-  transition: color var(--transition), letter-spacing 0.4s;
+  transition: color var(--transition-color), letter-spacing 0.4s;
   user-select: none;
   overflow: hidden;
 
@@ -96,7 +98,7 @@ export const a = styled.a`
     transform-origin: right;
     background-color: var(--main-color);
 
-    transition: transform 0.4s, background-color var(--transition);
+    transition: transform 0.4s, background-color var(--transition-color);
   }
 
   &:hover,

@@ -26,7 +26,12 @@ const NavBarMobile = ({
               key={index}
               className={currentLink == sec ? "current" : ""}
               href={`#${sec}`}
-              onClick={() => setCurrentLink(sec)}
+              onClick={() => {
+                setCurrentLink(sec);
+                setTimeout(() => {
+                  setMenuOpen(false);
+                }, 600);
+              }}
             >
               {sec}
             </S.a>

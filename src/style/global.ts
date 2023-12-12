@@ -11,19 +11,32 @@ export default createGlobalStyle`
  :root {
     --black: #000000;
     --white: #FFFFFF;
-    --opaque: rgba(0, 0, 0, .5);
-    
+
+    --bg-color: #FFFFFF;
     --main-color: #00abf0;
     --text-color: #333333;
     --second-text-color: #555555;
+
     --border: .125rem solid var(--main-color);
     --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
+    --opaque: rgba(0, 0, 0, .5);
 
-    --transition: .6s;
+    --transition-color: .6s;
+    --transition-theme: .4s;
 
     --days-one: 'Days One', sans-serif;
     --inter: 'Inter', sans-serif;
     --shrikhand: 'Shrikhand', cursive;
+ }
+
+ [data-theme="dark"]{
+   --bg-color: #000000;
+   --text-color: #FFFFFF;
+
+   --second-text-color: #555555;
+   --box-shadow: 0 .1rem .4rem rgba(255, 255, 255, .4);
+   --opaque: rgba(255, 255, 255, .2);
+
  }
 
  body {
@@ -32,7 +45,8 @@ export default createGlobalStyle`
    min-height: 100vh;
    overflow-x: hidden;
 
-   background-color: #FFF;
+   background-color: var(--bg-color);
+   transition: background-color var(--transition-theme);
  }
 
  html {
