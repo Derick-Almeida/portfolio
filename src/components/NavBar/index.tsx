@@ -32,7 +32,7 @@ const NavBar = () => {
       </S.h1>
 
       <S.nav>
-        {windowSize > 600 ? (
+        {windowSize > 650 ? (
           sections.map((sec, index) => (
             <S.a
               key={index}

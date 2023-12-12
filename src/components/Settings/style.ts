@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { rotate } from "../../animations";
 
 export const container = styled.div`
   display: flex;
@@ -31,6 +32,7 @@ export const icons = styled.div`
 
 export const span = styled.span`
   cursor: pointer;
+  background-color: var(--bg-color);
   box-shadow: var(--box-shadow);
   color: var(--text-color);
 
@@ -42,6 +44,10 @@ export const span = styled.span`
   border-radius: 0.5rem;
 
   transition: color var(--transition-theme), background-color var(--transition-theme);
+
+  &.config > svg {
+    animation: ${rotate} 3s linear infinite;
+  }
 `;
 
 export const colors = styled.div`
@@ -82,5 +88,5 @@ export const li = styled.li`
   width: 1.5rem;
   height: 1.5rem;
 
-  transition: border-color var(--transition-color);
+  transition: border-color var(--transition-theme);
 `;

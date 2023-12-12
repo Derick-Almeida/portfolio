@@ -13,7 +13,7 @@ const Settings = () => {
   return (
     <S.container className={openSettings ? "open" : ""}>
       <S.icons>
-        <S.span onClick={() => setOpenSettings(!openSettings)}>
+        <S.span onClick={() => setOpenSettings(!openSettings)} className="config">
           <LuSettings />
         </S.span>
 

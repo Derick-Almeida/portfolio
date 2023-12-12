@@ -17,7 +17,7 @@ export const header = styled.header`
   top: 0;
   z-index: 1001;
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     align-items: flex-end;
   }
 `;

@@ -79,7 +79,8 @@ export const a = styled.a`
   z-index: 2;
   width: 100%;
 
-  transition: color var(--transition-color), letter-spacing 0.4s;
+  transition: color var(--transition-theme), letter-spacing 0.4s;
+
   user-select: none;
   overflow: hidden;
 
