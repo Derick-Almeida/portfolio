@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const container = styled.section`
   width: 100%;
-  padding: 10rem 5%;
+  padding: 10rem 5% 5rem 5%;
   overflow: hidden;
 
   display: flex;
@@ -10,7 +10,6 @@ export const container = styled.section`
 
   @media (max-width: 700px) {
     flex-direction: column-reverse;
-    padding: 3rem 5%;
     gap: 3rem;
   }
 `;

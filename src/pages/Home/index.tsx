@@ -4,7 +4,7 @@ import ProfileImage from "../../components/ProfileImage";
 
 const Home = () => {
   return (
-    <S.container id="Home">
+    <S.container id="Início">
       <S.div>
         <S.p>
           Olá, sou Dérick Silva, Desenvolvedor Web, <S.span>adoro</S.span> criar e{" "}

@@ -58,10 +58,11 @@ export const colors = styled.div`
   gap: 0.8rem;
 
   box-shadow: var(--box-shadow);
+  background-color: var(--bg-color);
   border-radius: 0.5rem;
   padding: 0.5rem;
 
-  transition: box-shadow var(--transition-theme);
+  transition: box-shadow var(--transition-theme), background-color var(--transition-theme);
 `;
 
 export const p = styled.p`

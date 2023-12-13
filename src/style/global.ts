@@ -54,6 +54,8 @@ export default createGlobalStyle<IStyleProps>`
  }
 
  html {
+   scroll-behavior: smooth;
+   
    ::-webkit-scrollbar {
       width: 10px;
    }

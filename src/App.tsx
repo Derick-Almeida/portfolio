@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Settings from "./components/Settings";
+import Contacts from "./pages/Contacts";
 
 function App() {
   const { themeColor } = useContext(SettingsContext);
@@ -16,7 +17,10 @@ function App() {
 
       <NavBar />
       <Settings />
+
       <Home />
+
+      <Contacts />
       <Footer />
     </>
   );

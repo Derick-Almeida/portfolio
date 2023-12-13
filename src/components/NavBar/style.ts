@@ -13,7 +13,7 @@ export const header = styled.header`
   background-color: var(--bg-color);
   transition: background-color var(--transition-color), box-shadow var(--transition-theme);
 
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1001;
 
