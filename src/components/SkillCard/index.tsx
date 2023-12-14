@@ -5,8 +5,8 @@ import { ISkillProps } from "../../types";
 const SkillCard = ({ name, icon: Icon }: ISkillProps) => {
   return (
     <S.li>
-      <S.p>{name}</S.p>
       <Icon />
+      <S.p>{name}</S.p>
     </S.li>
   );
 };

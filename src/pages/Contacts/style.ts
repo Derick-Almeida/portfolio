@@ -3,13 +3,12 @@ import { float, shadowPulse } from "../../animations";
 
 export const container = styled.section`
   width: 100%;
-  padding: 3rem 5%;
+  padding: 6rem 5% 3rem 5%;
   overflow: hidden;
 
   display: flex;
 
   @media (max-width: 700px) {
-    padding: 1.5rem 5%;
     flex-direction: column;
   }
 `;

@@ -53,20 +53,20 @@ export const container = styled.div`
 
     transition: border-color var(--transition-color);
 
-    animation: ${rotate} 10s linear infinite;
+    animation: ${rotate} 20s linear infinite;
   }
 
-  @media (max-width: 320px) {
-    min-width: 10rem;
-    max-width: 10rem;
-    min-height: 10rem;
-    max-height: 10rem;
-  }
   @media (max-width: 900px) {
     min-width: 12rem;
     max-width: 12rem;
     min-height: 12rem;
     max-height: 12rem;
+  }
+  @media (max-width: 320px) {
+    min-width: 10rem;
+    max-width: 10rem;
+    min-height: 10rem;
+    max-height: 10rem;
   }
 `;
 
