@@ -1,30 +1,20 @@
 import * as S from "./style";
 
-import Button from "../Button";
-
-import { BiLinkExternal, BiLogoGithub } from "react-icons/bi";
 import { IProjectProps } from "../../types";
 
-export const ProjectCard = ({ title, image, hasFrontend, github, site }: IProjectProps) => {
-  return (
-    <S.li img={image}>
-      <S.div>
-        <S.h2>{title}</S.h2>
+import { HiExternalLink } from "react-icons/hi";
 
-        <S.buttons>
-          {hasFrontend && (
-            <a href={site} target="_blank">
-              <Button>
-                <BiLinkExternal /> See app
-              </Button>
-            </a>
-          )}
-          <a href={github} target="_blank">
-            <Button>
-              <BiLogoGithub /> See github
-            </Button>
-          </a>
-        </S.buttons>
+const ProjectCard = ({ image, link, title, description }: IProjectProps) => {
+  return (
+    <S.li>
+      <S.img src={image} alt="Project image" />
+
+      <S.div>
+        <S.h3>{title}</S.h3>
+        <S.p>{description}</S.p>
+        <S.a href={link} target="_blank">
+          <HiExternalLink />
+        </S.a>
       </S.div>
     </S.li>
   );

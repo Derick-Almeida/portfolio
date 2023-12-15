@@ -1,22 +1,23 @@
 import * as S from "./style";
 
-import TitlePage from "../../components/TitlePage";
+import SkillCard from "../../components/SkillCard";
 
-import data from "../../database/data.json";
-import usingComputer from "../../assets/techs.svg";
-import SkillButton from "../../components/SkillButton";
+import data from "../../database/data";
+
+import zoro from "../../assets/zoro.png";
 
 const Skills = () => {
   return (
-    <S.container>
-      <TitlePage>skills</TitlePage>
+    <S.container id="Habilidades">
+      <S.h2>Habilidades</S.h2>
 
-      <S.box>
-        <S.img src={usingComputer} alt="man using computer sitting on the floor" />
-        {data.skills!.map((skill) => (
-          <SkillButton key={skill}>{skill}</SkillButton>
+      <S.ul>
+        <S.img src={zoro} alt="zoro (One piece char)" />
+
+        {data.skills.map((skill, index) => (
+          <SkillCard key={index} {...skill} />
         ))}
-      </S.box>
+      </S.ul>
     </S.container>
   );
 };

@@ -1,25 +1,19 @@
 import * as S from "./style";
 
-import TitlePage from "../../components/TitlePage";
 import ProjectCard from "../../components/ProjectCard";
 
-import usingComputer from "../../assets/computer.svg";
-import data from "../../database/data.json";
+import data from "../../database/data";
 
 const Projects = () => {
   return (
-    <S.container>
-      <TitlePage>projects</TitlePage>
+    <S.container id="Projetos">
+      <S.h2>Projetos</S.h2>
 
-      <S.box>
-        <S.div>
-          <S.img src={usingComputer} alt="man using computer sitting on the floor" />
-        </S.div>
-
+      <S.ul>
         {data.projects.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}
-      </S.box>
+      </S.ul>
     </S.container>
   );
 };

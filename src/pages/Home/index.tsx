@@ -1,25 +1,24 @@
 import * as S from "./style";
-import coding from "../../assets/coding.svg";
-import TitlePage from "../../components/TitlePage";
+
+import ProfileImage from "../../components/ProfileImage";
 
 const Home = () => {
   return (
-    <S.container>
-      <TitlePage>home</TitlePage>
+    <S.container id="Início">
+      <S.div>
+        <S.p>
+          Olá, sou Dérick Silva, Desenvolvedor Web, <S.span>adoro</S.span> criar e{" "}
+          <S.span>desenvolver</S.span> projetos.
+        </S.p>
+        <S.p className="sub">
+          Conheça aqui neste ambiente, criado especialmente para você, todos os meus projetos e
+          tecnologias
+        </S.p>
+      </S.div>
 
-      <S.box>
-        <S.img src={coding} alt="man coding" />
-
-        <div>
-          <S.p>
-            I <b>love</b> creating and <b>developing</b> projects
-          </S.p>
-          <S.span>
-            Discover here in this environment, created especially for you, all my projects and
-            technologies
-          </S.span>
-        </div>
-      </S.box>
+      <S.div>
+        <ProfileImage />
+      </S.div>
     </S.container>
   );
 };

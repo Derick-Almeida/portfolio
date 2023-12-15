@@ -1,35 +1,61 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 import * as S from "./style";
 
-import TitlePage from "../../components/TitlePage";
+import Button from "../../components/Button";
 
-import { SiGmail, SiWhatsapp, SiLinkedin, SiGithub } from "react-icons/si";
-import usingComputer from "../../assets/studying.svg";
+import brook from "../../assets/brook.png";
 
 const Contacts = () => {
-  return (
-    <S.container>
-      <TitlePage>contacts</TitlePage>
+  const form = useRef<HTMLFormElement>(null);
 
+  const sendEmail = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs.sendForm("service_48s5vli", "template_msi9q4y", form.current, "s-9GhQY4lIEemJGR_");
+    }
+  };
+
+  return (
+    <S.container id="Contato">
       <S.div>
-        <S.ul>
-          <S.li>
-            <SiGmail /> d.a.s2000silva14@gmail.com
-          </S.li>
-          <S.li>
-            <SiWhatsapp /> (48) 99921-7517
-          </S.li>
-          <S.li>
-            <S.a href="https://www.linkedin.com/in/derick-almeida/" target="_blank">
-              <SiLinkedin /> Linkedin
-            </S.a>
-          </S.li>
-          <S.li>
-            <S.a href="https://github.com/Derick-Almeida" target="_blank">
-              <SiGithub /> Github
-            </S.a>
-          </S.li>
-        </S.ul>
-        <S.img src={usingComputer} alt="man using computer" />
+        <S.h2>Contate-me!</S.h2>
+
+        <S.form ref={form} onSubmit={sendEmail}>
+          <input
+            type="text"
+            placeholder="Nome Completo"
+            name="from_name"
+            required
+            autoComplete="off"
+          />
+          <input
+            type="email"
+            placeholder="Endereço de Email"
+            name="email"
+            required
+            autoComplete="off"
+          />
+          <textarea
+            placeholder="Sua Menssagem"
+            cols={20}
+            rows={10}
+            maxLength={10000}
+            name="message"
+            required
+            autoComplete="off"
+          ></textarea>
+
+          <Button variant="contained" type="submit">
+            Enviar Menssagem
+          </Button>
+        </S.form>
+      </S.div>
+      <S.div>
+        <S.img src={brook} alt="brook (One piece char)" />
+        <S.shadow />
       </S.div>
     </S.container>
   );

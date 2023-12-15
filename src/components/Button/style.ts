@@ -1,50 +1,67 @@
-import styled from "styled-components";
-import { colorChange } from "../../animations";
+import styled, { css } from "styled-components";
 
-export const button = styled.button`
-  background-color: var(--grey);
+interface IButtonStyleProps {
+  variant: string;
+}
 
-  border-radius: 8px;
-  border: 2px solid var(--white);
-  padding: 5px 10px;
-
+export const button = styled.button<IButtonStyleProps>`
+  padding: 0.8rem 1.2rem;
+  border: var(--border);
+  border-radius: 0.3rem;
   position: relative;
-  overflow: hidden;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
 
-  animation: ${colorChange} 10s linear infinite;
+  transition: background-color 0.6s, color 0.6s, border-color 0.6s;
 
-  &::before {
-    content: "";
-    min-width: 50px;
-    min-height: 15px;
-    background-color: var(--aqua);
-
+  > a {
     position: absolute;
-    border-radius: 100%;
-    transform: scale(0);
-    transition: transform 0.4s;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
   }
 
-  &:hover::before {
-    transform: scale(4);
-  }
-`;
+  ${({ variant }) => {
+    switch (variant) {
+      case "contained": {
+        return css`
+          background-color: var(--main-color);
+          color: var(--white);
 
-export const p = styled.p`
-  color: var(--black);
-  font-size: 1.2rem;
-  font-weight: 400;
-  font-family: var(--days-one);
+          &:hover {
+            background-color: var(--white);
+            color: var(--main-color);
+          }
+        `;
+      }
 
-  position: relative;
-  z-index: 9;
+      case "outlined": {
+        return css`
+          background-color: var(--white);
+          color: var(--main-color);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
+          &:hover {
+            background-color: var(--main-color);
+            color: var(--white);
+          }
+        `;
+      }
+
+      default: {
+        return css`
+          border: 0.125rem solid var(--black);
+          background-color: var(--white);
+          color: var(--black);
+
+          &:hover {
+            background-color: var(--black);
+            color: var(--white);
+          }
+        `;
+      }
+    }
+  }}
 `;
