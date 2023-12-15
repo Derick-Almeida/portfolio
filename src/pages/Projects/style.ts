@@ -1,25 +1,30 @@
 import styled from "styled-components";
 
-export const container = styled.div`
-  padding: 5rem 10%;
+export const container = styled.section`
+  width: 100%;
+  padding: 7rem 5% 2rem 5%;
 `;
 
-export const box = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 5rem;
+export const h2 = styled.h2`
+  text-align: center;
+  color: var(--text-color);
+  font-size: 2rem;
+  margin-bottom: 3rem;
+
+  transition: color var(--transition-theme);
 `;
 
-export const div = styled.div`
-  display: flex;
+export const ul = styled.ul`
+  display: grid;
+  grid-template-columns: auto auto auto;
   justify-content: center;
-  align-items: center;
-  width: 48%;
-`;
+  gap: 1.5rem;
 
-export const img = styled.img`
-  width: 60%;
+  @media (max-width: 850px) {
+    grid-template-columns: auto auto;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: auto;
+  }
 `;

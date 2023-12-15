@@ -1,53 +1,90 @@
-import styled, { css } from "styled-components";
-
-interface styleProps {
-  $active: boolean;
-}
+import styled from "styled-components";
 
 export const header = styled.header`
-  color: var(--white);
-  text-transform: capitalize;
-  font-size: 1.6rem;
-  padding: 2vh 10%;
-
-  box-shadow: 0 -10px 25px var(--aqua);
-  background-color: var(--black);
-
-  position: sticky;
-  top: 0;
-  z-index: 999;
-`;
-
-export const ul = styled.ul`
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 5%;
+  box-shadow: var(--box-shadow);
+
+  width: 100%;
+  background-color: var(--bg-color);
+  transition: background-color var(--transition-color), box-shadow var(--transition-theme);
+
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+
+  @media (max-width: 650px) {
+    align-items: flex-end;
+  }
 `;
 
-export const li = styled.li<styleProps>`
+export const nav = styled.nav`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+`;
+
+export const h1 = styled.h1`
+  color: var(--text-color);
   font-family: var(--shrikhand);
-  font-style: italic;
-  font-weight: bold;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1.8rem;
 
-  -webkit-text-stroke: 1px var(--black);
-
-  transition: 0.4s;
-
-  &:hover {
-    cursor: pointer;
-
-    text-shadow: 0 0 15px var(--aqua), 0 0 5px var(--aqua);
-    -webkit-text-stroke: 1px var(--aqua);
-    color: var(--black);
+  > i {
+    font-weight: bold;
+    color: var(--main-color);
+    transition: color var(--transition-color);
   }
 
-  ${(props) =>
-    props.$active &&
-    css`
-      cursor: pointer;
+  transition: color var(--transition-theme);
 
-      text-shadow: 0 0 15px var(--aqua), 0 0 5px var(--aqua);
-      -webkit-text-stroke: 1px var(--aqua);
-      color: var(--black);
-    `}
+  @media (max-width: 320px) {
+    font-size: 1.4rem;
+  }
+`;
+
+export const span = styled.span`
+  color: var(--text-color);
+  font-size: 1.6rem;
+
+  transition: color var(--transition-theme);
+`;
+
+export const a = styled.a`
+  position: relative;
+  text-transform: capitalize;
+  color: var(--text-color);
+  font-weight: 600;
+
+  transition: color var(--transition-theme);
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 0.15rem;
+
+    position: absolute;
+    bottom: -0.15rem;
+    left: 0;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s, background-color var(--transition-color);
+  }
+
+  &:hover,
+  &.current {
+    color: var(--main-color);
+    transition: color var(--transition-color);
+
+    &::before {
+      background-color: var(--main-color);
+      transform: scaleX(1);
+    }
+  }
 `;

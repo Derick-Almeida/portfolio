@@ -1,46 +1,87 @@
 import styled from "styled-components";
 
-interface CardStyleProps {
-  $img: string;
-}
+export const div = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
 
-export const li = styled.li<CardStyleProps>`
-  border: 2px solid var(--white);
-  border-radius: 8px;
-  height: 35vh;
-  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 
-  background: url(${(props) => props.$img}) top no-repeat;
-  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 0 10%;
+
+  background: linear-gradient(0deg, var(--main-color), transparent);
+  transform: translateY(100%);
+  transition: transform 0.4s;
+`;
+
+export const li = styled.li`
+  overflow: hidden;
+  width: 100%;
+  height: 12rem;
 
   position: relative;
-  overflow: hidden;
-`;
-
-export const div = styled.div`
-  background-color: var(--opaque);
-  box-shadow: 0 0 25px 25px var(--opaque);
-
-  position: absolute;
-  bottom: 0;
-
-  min-width: 100%;
-  min-height: 50%;
-
+  border-radius: 0.5rem;
   text-align: center;
-`;
-
-export const h2 = styled.h2`
   color: var(--white);
-  font-size: 2rem;
-  font-family: var(--days-one);
-  font-weight: 400;
-  margin-bottom: 1.5rem;
+
+  box-shadow: var(--box-shadow);
+
+  transition: box-shadow var(--transition-theme);
+
+  &:hover {
+    ${div} {
+      transform: translateY(0%);
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 350px) {
+    width: 15rem;
+    height: 10rem;
+  }
 `;
 
-export const buttons = styled.div`
+export const h3 = styled.h3`
+  font-size: 1.5rem;
+  font-family: var(--days-one);
+  white-space: nowrap;
+`;
+
+export const p = styled.p`
+  font-size: 1rem;
+  font-weight: 600;
+`;
+
+export const a = styled.a`
+  background-color: var(--white);
+  color: var(--black);
+
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+
+  padding: 0.5rem;
+  border-radius: 50%;
+
+  transition: background-color 0.4s, color 0.4s;
+
+  &:hover {
+    background-color: var(--main-color);
+    color: var(--white);
+  }
+`;
+
+export const img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
