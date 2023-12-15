@@ -47,49 +47,55 @@ export default {
       image: "https://i.imgur.com/fRMWitY.png",
       title: "Shop Now",
       description:
-        "Shop Now é uma aplicação que simula uma padaria, tendo como suas principais funcionalidades a filtragem dos produtos e a adição dos mesmos ao carrinho.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
       link: "https://shop-now-dk.vercel.app/",
-    },
-    {
-      id: "fa9a2513-444f-470b-84c1-2596ae4b69b3",
-      title: "Project Manager",
-      image: "https://i.imgur.com/T2XuKDL.jpg",
-      description: "",
-      link: "https://github.com/Derick-Almeida/api-project_manager-nodejs-ts",
     },
     {
       id: "2bbca05c-a1c3-43b1-9ae9-6c2148b655fb",
       title: "NuKenzie",
       image: "https://i.imgur.com/DJciWOM.png",
-      description: "",
-      link: "https://github.com/Derick-Almeida/nukenzie-react-js",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
+      link: "https://nukenzie-mu.vercel.app/",
+    },
+    {
+      id: "82592b1e-1601-4cf7-a998-6ffad7a581a8",
+      title: "Burger Kenzie",
+      image: "https://i.imgur.com/npi9pJq.png",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
+      link: "https://burguer-kenzie-derick-almeida.vercel.app/",
+    },
+    {
+      id: "fa9a2513-444f-470b-84c1-2596ae4b69b3",
+      title: "Project Manager",
+      image: "https://i.imgur.com/T2XuKDL.jpg",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
+      link: "https://github.com/Derick-Almeida/api-project_manager-nodejs-ts",
     },
     {
       id: "5253c913-a20b-4c30-bf1e-afff1b685040",
       title: "Kimoveis",
       image: "https://i.imgur.com/woJheFg.png",
-      description: "",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
       link: "https://github.com/Derick-Almeida/api-kimoveis-nodejs-ts",
     },
     {
       id: "cad8aec9-564e-46ed-8da1-1cabba65adfd",
       title: "Futcamp",
       image: "https://i.imgur.com/uhQ2IHX.png",
-      description: "",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
       link: "https://github.com/Derick-Almeida/api-futcamp-django-py",
-    },
-    {
-      id: "82592b1e-1601-4cf7-a998-6ffad7a581a8",
-      title: "Burger Kenzie",
-      image: "https://i.imgur.com/npi9pJq.png",
-      description: "",
-      link: "https://github.com/Derick-Almeida/burguer_kenzie-react-js",
     },
     {
       id: "811dd8b5-620e-469a-a366-fa74a4d733e5",
       title: "KMDB",
       image: "https://i.imgur.com/EYzpwGp.jpg",
-      description: "",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
       link: "https://github.com/Derick-Almeida/api-kmdb-django-py",
     },
   ],

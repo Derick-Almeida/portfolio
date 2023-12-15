@@ -18,6 +18,7 @@ export interface IProjectProps {
   id: string;
   title: string;
   image: string;
+  description: string;
   link: string;
 }
 

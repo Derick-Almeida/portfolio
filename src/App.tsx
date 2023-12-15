@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Settings from "./components/Settings";
 import Contacts from "./pages/Contacts";
 import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
 
 function App() {
   const { themeColor } = useContext(SettingsContext);
@@ -21,8 +22,9 @@ function App() {
 
       <Home />
       <Skills />
-
+      <Projects />
       <Contacts />
+
       <Footer />
     </>
   );

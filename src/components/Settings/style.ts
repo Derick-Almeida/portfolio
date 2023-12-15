@@ -8,7 +8,7 @@ export const container = styled.div`
   position: fixed;
   z-index: 10;
   right: 0;
-  top: 15%;
+  top: 6.5rem;
 
   transform: translateX(75%);
   transition: transform 0.4s;

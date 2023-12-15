@@ -37,7 +37,7 @@ export default createGlobalStyle<IStyleProps>`
    --bg-color: #000000;
    --text-color: #FFFFFF;
 
-   --second-text-color: #555555;
+   --second-text-color: #BBBBBB;
    --box-shadow: 0 .1rem .4rem rgba(255, 255, 255, .4);
    --opaque: rgba(255, 255, 255, .2);
 

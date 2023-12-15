@@ -3,7 +3,7 @@ import { float, shadowPulse } from "../../animations";
 
 export const container = styled.section`
   width: 100%;
-  padding: 6rem 5% 3rem 5%;
+  padding: 5rem 5% 3rem 5%;
   overflow: hidden;
 
   display: flex;
@@ -46,6 +46,8 @@ export const form = styled.form`
   textarea {
     border-radius: 0.3rem;
     border: var(--border);
+
+    caret-color: var(--main-color);
 
     padding: 0.8rem 1rem;
     outline: none;

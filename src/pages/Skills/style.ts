@@ -70,6 +70,7 @@ export const ul = styled.ul`
       ". ."
       ". ."
       ". .";
+    gap: 1rem;
   }
 
   @media (max-width: 275px) {
