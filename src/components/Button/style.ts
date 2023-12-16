@@ -13,7 +13,10 @@ export const button = styled.button<IButtonStyleProps>`
   font-size: 1rem;
   font-weight: 600;
 
-  transition: background-color 0.6s, color 0.6s, border-color 0.6s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 
   > a {
     position: absolute;
@@ -29,10 +32,13 @@ export const button = styled.button<IButtonStyleProps>`
       case "contained": {
         return css`
           background-color: var(--main-color);
-          color: var(--white);
+          color: var(--bg-color);
+
+          transition: background-color var(--transition-color), color var(--transition-theme),
+            border-color var(--transition-color);
 
           &:hover {
-            background-color: var(--white);
+            background-color: var(--bg-color);
             color: var(--main-color);
           }
         `;
@@ -40,25 +46,31 @@ export const button = styled.button<IButtonStyleProps>`
 
       case "outlined": {
         return css`
-          background-color: var(--white);
+          background-color: var(--bg-color);
           color: var(--main-color);
+
+          transition: background-color var(--transition-theme), color var(--transition-color),
+            border-color var(--transition-color);
 
           &:hover {
             background-color: var(--main-color);
-            color: var(--white);
+            color: var(--bg-color);
           }
         `;
       }
 
       default: {
         return css`
-          border: 0.125rem solid var(--black);
-          background-color: var(--white);
-          color: var(--black);
+          border: 0.125rem solid var(--text-color);
+          background-color: var(--bg-color);
+          color: var(--text-color);
+
+          transition: background-color var(--transition-theme), color var(--transition-theme),
+            border-color var(--transition-theme);
 
           &:hover {
-            background-color: var(--black);
-            color: var(--white);
+            background-color: var(--text-color);
+            color: var(--bg-color);
           }
         `;
       }

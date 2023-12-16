@@ -52,4 +52,11 @@ export const span = styled.span`
   transition: color var(--transition-color);
 `;
 
-export const buttonsContainer = styled.div``;
+export const buttonsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  gap: 1.5rem;
+
+  margin-top: 1rem;
+`;
