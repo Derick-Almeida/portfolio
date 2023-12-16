@@ -3,7 +3,7 @@ import { rotate } from "../../animations";
 
 export const container = styled.div`
   border: var(--border);
-  border-width: 0.5rem;
+  border-width: 0.7rem;
   border-radius: 50%;
 
   min-width: 14rem;
@@ -42,8 +42,8 @@ export const container = styled.div`
     position: absolute;
     z-index: -1;
 
-    width: 130%;
-    height: 130%;
+    width: 140%;
+    height: 140%;
 
     border-radius: 50%;
 
