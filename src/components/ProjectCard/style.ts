@@ -20,6 +20,12 @@ export const div = styled.div`
   transition: transform 0.4s;
 `;
 
+export const img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 export const li = styled.li`
   overflow: hidden;
   width: 100%;
@@ -37,6 +43,11 @@ export const li = styled.li`
   &:hover {
     ${div} {
       transform: translateY(0%);
+    }
+
+    ${img} {
+      filter: brightness(0.2);
+      transition: filter 0.4s;
     }
   }
 
@@ -78,10 +89,4 @@ export const a = styled.a`
     background-color: var(--main-color);
     color: var(--white);
   }
-`;
-
-export const img = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 `;
