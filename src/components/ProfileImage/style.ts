@@ -30,7 +30,7 @@ export const container = styled.div`
 
     border-radius: 50%;
 
-    border: 0.5rem solid transparent;
+    border: 0.6rem solid transparent;
     border-bottom: 0.5rem solid var(--main-color);
 
     transform: rotate(-35deg);
@@ -47,7 +47,7 @@ export const container = styled.div`
 
     border-radius: 50%;
 
-    border: 0.5rem solid transparent;
+    border: 0.6rem solid transparent;
     border-top-color: var(--main-color);
     border-bottom-color: var(--main-color);
 
@@ -81,6 +81,9 @@ export const img = styled.img`
   object-fit: cover;
   object-position: top;
   border-bottom-right-radius: 50%;
+
+  filter: drop-shadow(3px 0px 1px var(--main-color)) drop-shadow(1px 1px var(--text-color));
+  transition: filter var(--transition-color);
 
   @media (max-width: 900px) {
     top: -1.3rem;

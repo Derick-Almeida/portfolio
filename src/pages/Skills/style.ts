@@ -23,6 +23,9 @@ export const img = styled.img`
   user-select: none;
   transform: scale(1.5) translate(25%, -15%);
 
+  filter: drop-shadow(2px 0px 1px var(--main-color)) drop-shadow(1px 1px var(--text-color));
+  transition: filter var(--transition-color);
+
   @media (max-width: 275px) {
     transform: scale(1.3) translate(0, -15%);
   }

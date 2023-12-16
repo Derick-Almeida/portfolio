@@ -67,6 +67,9 @@ export const img = styled.img`
   object-fit: contain;
   user-select: none;
 
+  filter: drop-shadow(2px 2px 2px var(--main-color)) drop-shadow(1px 1px var(--text-color));
+  transition: filter var(--transition-color);
+
   animation: ${float} 3s linear infinite;
 `;
 
