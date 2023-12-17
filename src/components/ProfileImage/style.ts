@@ -56,6 +56,12 @@ export const container = styled.div`
     animation: ${rotate} 20s linear infinite;
   }
 
+  @media (min-width: 1200px) {
+    min-width: 18rem;
+    max-width: 18rem;
+    min-height: 18rem;
+    max-height: 18rem;
+  }
   @media (max-width: 900px) {
     min-width: 12rem;
     max-width: 12rem;
@@ -85,6 +91,9 @@ export const img = styled.img`
   filter: drop-shadow(3px 0px 1px var(--main-color)) drop-shadow(1px 1px var(--text-color));
   transition: filter var(--transition-color);
 
+  @media (min-width: 1200px) {
+    top: -2rem;
+  }
   @media (max-width: 900px) {
     top: -1.3rem;
   }

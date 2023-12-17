@@ -33,7 +33,7 @@ export const h1 = styled.h1`
   font-family: var(--shrikhand);
   text-transform: capitalize;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 2.5vw, 3.5rem);
 
   > i {
     font-weight: bold;
@@ -42,10 +42,6 @@ export const h1 = styled.h1`
   }
 
   transition: color var(--transition-theme);
-
-  @media (max-width: 320px) {
-    font-size: 1.4rem;
-  }
 `;
 
 export const span = styled.span`
@@ -60,6 +56,7 @@ export const a = styled.a`
   text-transform: capitalize;
   color: var(--text-color);
   font-weight: 600;
+  font-size: clamp(1rem, 1.3vw, 2rem);
 
   transition: color var(--transition-theme);
 

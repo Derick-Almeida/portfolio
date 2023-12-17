@@ -10,8 +10,9 @@ export const button = styled.button<IButtonStyleProps>`
   border-radius: 0.3rem;
   position: relative;
 
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.5vw, 2rem);
   font-weight: 600;
+  white-space: nowrap;
 
   display: flex;
   align-items: center;

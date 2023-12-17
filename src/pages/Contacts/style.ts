@@ -30,7 +30,7 @@ export const div = styled.div`
 export const h2 = styled.h2`
   text-align: center;
   color: var(--text-color);
-  font-size: 2rem;
+  font-size: clamp(2rem, 3vw, 4rem);
   margin-bottom: 1rem;
 
   transition: color var(--transition-theme);
@@ -49,11 +49,12 @@ export const form = styled.form`
 
     caret-color: var(--main-color);
 
-    padding: 0.8rem 1rem;
+    padding: clamp(0.8rem, 1.3vw, 1.5rem) clamp(1rem, 1.5vw, 2rem);
     outline: none;
     resize: none;
 
-    font-size: 1rem;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+
     color: var(--text-color);
     background-color: var(--bg-color);
 
