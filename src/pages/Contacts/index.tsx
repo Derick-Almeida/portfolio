@@ -2,6 +2,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 import * as S from "./style";
+import { toast } from "react-toastify";
 
 import Button from "../../components/Button";
 
@@ -14,7 +15,12 @@ const Contacts = () => {
     e.preventDefault();
 
     if (form.current) {
-      emailjs.sendForm("service_48s5vli", "template_msi9q4y", form.current, "s-9GhQY4lIEemJGR_");
+      emailjs
+        .sendForm("service_48s5vli", "template_msi9q4y", form.current, "s-9GhQY4lIEemJGR_")
+        .then(() => toast.success("Email enviado com sucesso!"))
+        .catch(() => toast.error("Não foi possível enviar o email!"));
+
+      form.current.reset();
     }
   };
 

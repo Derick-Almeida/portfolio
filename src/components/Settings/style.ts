@@ -3,7 +3,7 @@ import { rotate } from "../../animations";
 
 export const container = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 
   position: fixed;
   z-index: 10;
@@ -27,7 +27,7 @@ export const container = styled.div`
 export const icons = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: clamp(0.5rem, 1vw, 1rem);
 `;
 
 export const span = styled.span`
@@ -40,7 +40,8 @@ export const span = styled.span`
   justify-content: center;
   align-items: center;
 
-  padding: 0.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  padding: clamp(0.5rem, 0.8vw, 1rem);
   border-radius: 0.5rem;
 
   transition: color var(--transition-theme), background-color var(--transition-theme);
@@ -60,13 +61,13 @@ export const colors = styled.div`
   box-shadow: var(--box-shadow);
   background-color: var(--bg-color);
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: clamp(0.5rem, 0.8vw, 1rem);
 
   transition: box-shadow var(--transition-theme), background-color var(--transition-theme);
 `;
 
 export const p = styled.p`
-  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 1.5vw, 1.5rem);
   font-weight: 400;
   color: var(--text-color);
 
@@ -76,8 +77,8 @@ export const p = styled.p`
 export const ul = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  width: 8rem;
+  gap: clamp(0.5rem, 0.8vw, 1rem);
+  width: clamp(8rem, 11vw, 10rem);
 `;
 
 export const li = styled.li`
@@ -86,8 +87,8 @@ export const li = styled.li`
   border-radius: 50%;
   cursor: pointer;
 
-  width: 1.5rem;
-  height: 1.5rem;
+  width: clamp(1.5rem, 2vw, 2.5rem);
+  height: clamp(1.5rem, 2vw, 2.5rem);
 
   transition: border-color var(--transition-theme);
 `;

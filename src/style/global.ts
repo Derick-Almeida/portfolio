@@ -62,7 +62,7 @@ export default createGlobalStyle<IStyleProps>`
    
    ::-webkit-scrollbar-thumb {
       border-radius: 50px;
-      background-color: #DDDDDD;
+      background-color: var(--main-color);
    }
  }
  

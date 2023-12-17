@@ -20,10 +20,16 @@ export const div = styled.div`
   transition: transform 0.4s;
 `;
 
+export const img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 export const li = styled.li`
   overflow: hidden;
   width: 100%;
-  height: 12rem;
+  height: clamp(12rem, 16vw, 20rem);
 
   position: relative;
   border-radius: 0.5rem;
@@ -38,26 +44,22 @@ export const li = styled.li`
     ${div} {
       transform: translateY(0%);
     }
-  }
 
-  @media (max-width: 600px) {
-    width: 20rem;
-  }
-
-  @media (max-width: 350px) {
-    width: 15rem;
-    height: 10rem;
+    ${img} {
+      filter: brightness(0.2);
+      transition: filter 0.4s;
+    }
   }
 `;
 
 export const h3 = styled.h3`
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
   font-family: var(--days-one);
   white-space: nowrap;
 `;
 
 export const p = styled.p`
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
   font-weight: 600;
 `;
 
@@ -69,7 +71,8 @@ export const a = styled.a`
   justify-content: center;
   align-items: center;
 
-  padding: 0.5rem;
+  padding: clamp(0.5rem, 1vw, 1rem);
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
   border-radius: 50%;
 
   transition: background-color 0.4s, color 0.4s;
@@ -78,10 +81,4 @@ export const a = styled.a`
     background-color: var(--main-color);
     color: var(--white);
   }
-`;
-
-export const img = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 `;
