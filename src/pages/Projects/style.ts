@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const container = styled.section`
   width: 100%;
-  padding: 7rem 5% 2rem 5%;
+  padding: 7rem 5%;
 `;
 
 export const h2 = styled.h2`

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { SettingsContext } from "./contexts/settings.context";
 
 import GlobalStyle from "./style/global";
@@ -15,6 +15,8 @@ import Projects from "./pages/Projects";
 
 function App() {
   const { theme, themeColor } = useContext(SettingsContext);
+
+  const container = useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -33,14 +35,14 @@ function App() {
         theme={theme as "light" | "dark"}
       />
 
-      <NavBar />
+      <NavBar container={container} />
       <Settings />
-
-      <Home />
-      <Skills />
-      <Projects />
-      <Contacts />
-
+      <div ref={container}>
+        <Home />
+        <Skills />
+        <Projects />
+        <Contacts />
+      </div>
       <Footer />
     </>
   );
