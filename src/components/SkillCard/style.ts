@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const p = styled.p`
   font-family: var(--days-one);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.3vw, 2rem);
 `;
 
 export const li = styled.li`
-  width: 8rem;
-  height: 6rem;
+  width: clamp(8rem, 10vw, 12rem);
+  height: clamp(6rem, 9vw, 10rem);
 
   border: var(--border);
   color: var(--main-color);
@@ -16,7 +16,7 @@ export const li = styled.li`
 
   border-radius: 0.5rem;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 3.5vw, 4rem);
 
   display: flex;
   flex-direction: column;

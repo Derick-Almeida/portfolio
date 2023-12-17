@@ -3,7 +3,7 @@ import { rotate } from "../../animations";
 
 export const container = styled.div`
   border: var(--border);
-  border-width: 0.5rem;
+  border-width: 0.7rem;
   border-radius: 50%;
 
   min-width: 14rem;
@@ -30,7 +30,7 @@ export const container = styled.div`
 
     border-radius: 50%;
 
-    border: 0.5rem solid transparent;
+    border: 0.6rem solid transparent;
     border-bottom: 0.5rem solid var(--main-color);
 
     transform: rotate(-35deg);
@@ -42,12 +42,12 @@ export const container = styled.div`
     position: absolute;
     z-index: -1;
 
-    width: 130%;
-    height: 130%;
+    width: 140%;
+    height: 140%;
 
     border-radius: 50%;
 
-    border: 0.5rem solid transparent;
+    border: 0.6rem solid transparent;
     border-top-color: var(--main-color);
     border-bottom-color: var(--main-color);
 
@@ -56,6 +56,12 @@ export const container = styled.div`
     animation: ${rotate} 20s linear infinite;
   }
 
+  @media (min-width: 1200px) {
+    min-width: 18rem;
+    max-width: 18rem;
+    min-height: 18rem;
+    max-height: 18rem;
+  }
   @media (max-width: 900px) {
     min-width: 12rem;
     max-width: 12rem;
@@ -82,6 +88,12 @@ export const img = styled.img`
   object-position: top;
   border-bottom-right-radius: 50%;
 
+  filter: drop-shadow(3px 0px 1px var(--main-color)) drop-shadow(1px 1px var(--text-color));
+  transition: filter var(--transition-color);
+
+  @media (min-width: 1200px) {
+    top: -2rem;
+  }
   @media (max-width: 900px) {
     top: -1.3rem;
   }

@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const container = styled.section`
   width: 100%;
-  padding: 7rem 5% 2rem 5%;
+  padding: 7rem 5%;
 `;
 
 export const h2 = styled.h2`
   text-align: center;
   color: var(--text-color);
-  font-size: 2rem;
+  font-size: clamp(2rem, 3vw, 4rem);
   margin-bottom: 3rem;
 
   transition: color var(--transition-theme);

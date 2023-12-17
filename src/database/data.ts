@@ -46,57 +46,44 @@ export default {
       id: "92b24da1-76d7-4dc6-a17f-f14ade23baef",
       image: "https://i.imgur.com/fRMWitY.png",
       title: "Shop Now",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
+      description: "Simula uma padaria, com filtro de produtos e adição ao carrinho.",
       link: "https://shop-now-dk.vercel.app/",
     },
     {
       id: "2bbca05c-a1c3-43b1-9ae9-6c2148b655fb",
       title: "NuKenzie",
       image: "https://i.imgur.com/DJciWOM.png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
+      description: "Gerenciamento de gastos, cadastrando entradas e saídas.",
       link: "https://nukenzie-mu.vercel.app/",
     },
     {
       id: "82592b1e-1601-4cf7-a998-6ffad7a581a8",
-      title: "Burger Kenzie",
-      image: "https://i.imgur.com/npi9pJq.png",
+      title: "Insider Store",
+      image: "https://i.imgur.com/0eQtmEr.png",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
-      link: "https://burguer-kenzie-derick-almeida.vercel.app/",
+        "Clone de uma página de produto da insider store, com foco no carrossel de imagens.",
+      link: "https://insiderstore-clone.vercel.app/",
     },
     {
       id: "fa9a2513-444f-470b-84c1-2596ae4b69b3",
       title: "Project Manager",
       image: "https://i.imgur.com/T2XuKDL.jpg",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
+      description: "API de armazenamento de projetos com filtro por categorias.",
       link: "https://github.com/Derick-Almeida/api-project_manager-nodejs-ts",
     },
     {
       id: "5253c913-a20b-4c30-bf1e-afff1b685040",
       title: "Kimoveis",
       image: "https://i.imgur.com/woJheFg.png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
+      description: "APi para venda de imóveis, locação e marcação de visitas",
       link: "https://github.com/Derick-Almeida/api-kimoveis-nodejs-ts",
     },
     {
       id: "cad8aec9-564e-46ed-8da1-1cabba65adfd",
       title: "Futcamp",
       image: "https://i.imgur.com/uhQ2IHX.png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
+      description: "API para consulta de informações sobre times, jogadores, campeonatos e jogos.",
       link: "https://github.com/Derick-Almeida/api-futcamp-django-py",
-    },
-    {
-      id: "811dd8b5-620e-469a-a366-fa74a4d733e5",
-      title: "KMDB",
-      image: "https://i.imgur.com/EYzpwGp.jpg",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia delectus mollitia",
-      link: "https://github.com/Derick-Almeida/api-kmdb-django-py",
     },
   ],
 };
