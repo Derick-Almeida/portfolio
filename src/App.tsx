@@ -1,6 +1,13 @@
+import GlobalStyle from "./style/global";
+
+import Header from "./components/Header";
+
 function App() {
   return (
     <>
+      <GlobalStyle />
+      <Header />
+
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum vel sequi harum molestias
         magni cumque nostrum blanditiis deserunt non! Error exercitationem mollitia ab vitae rerum
