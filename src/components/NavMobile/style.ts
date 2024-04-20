@@ -72,7 +72,7 @@ export const nav = styled.nav<Props>`
           width: 100%;
 
           & ${link} {
-            transform: scaleX(1);
+            transform: translateX(0);
           }
         `;
       case "close":
@@ -80,7 +80,7 @@ export const nav = styled.nav<Props>`
           width: 0%;
 
           & ${link} {
-            transform: scaleX(0);
+            transform: translateX(100%);
           }
         `;
     }
