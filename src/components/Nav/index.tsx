@@ -1,24 +1,18 @@
 import * as S from "./style";
 
-import { IoClose } from "react-icons/io5";
-
 interface Props {
-  nav: boolean;
-  setNav: (e: boolean) => void;
+  sections: string[];
 }
 
-const Nav = ({ nav, setNav }: Props) => {
+const Nav = ({ sections }: Props) => {
   return (
-    <S.nav nav={nav}>
+    <S.nav>
       <S.ul>
-        <S.button onClick={() => setNav(false)}>
-          <IoClose />
-        </S.button>
-
-        <S.link href="#">home</S.link>
-        <S.link href="#">skills</S.link>
-        <S.link href="#">projects</S.link>
-        <S.link href="#">contact</S.link>
+        {sections.map((section) => (
+          <S.link key={section} href="#">
+            {section}
+          </S.link>
+        ))}
       </S.ul>
     </S.nav>
   );
