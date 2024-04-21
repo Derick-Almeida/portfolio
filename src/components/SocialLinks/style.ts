@@ -6,6 +6,7 @@ export const container = styled.div`
   gap: 1.5rem;
   font-size: 1.5rem;
 `;
+
 export const link = styled.a`
   display: flex;
   align-items: center;

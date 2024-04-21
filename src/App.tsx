@@ -2,6 +2,7 @@ import GlobalStyle from "./style/global";
 
 import Header from "./components/Header";
 import Home from "./pages/home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <Home />
+      <Footer />
     </>
   );
 }

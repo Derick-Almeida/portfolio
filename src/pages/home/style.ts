@@ -5,6 +5,7 @@ export const main = styled.main`
   flex-direction: column;
   gap: 3rem;
 
+  min-height: 75vh;
   max-width: 100%;
   overflow-x: hidden;
   padding: 2rem 0;
@@ -48,6 +49,7 @@ export const content = styled.div`
 export const img = styled.img`
   width: 60%;
   object-fit: contain;
+  user-select: none;
 
   @media (min-width: 768px) {
     width: 100%;
