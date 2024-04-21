@@ -5,8 +5,8 @@ export const footer = styled.footer`
   justify-content: center;
   align-items: center;
 
-  height: 3.8rem;
-  background-color: #0f0f0f;
+  height: 10vh;
+  background-color: var(--bg-footer);
 
   font-size: 1rem;
   text-align: center;

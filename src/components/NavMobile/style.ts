@@ -54,10 +54,11 @@ export const link = styled.a`
 `;
 
 export const nav = styled.nav<Props>`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   overflow: hidden;
+  z-index: 9;
 
   height: 100vh;
   background-color: var(--bg-color);

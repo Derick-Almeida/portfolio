@@ -1,5 +1,5 @@
 import * as S from "./style";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Nav from "../Nav";
 
@@ -10,6 +10,16 @@ import Logo from "../Logo";
 const Header = () => {
   const [nav, setNav] = useState<boolean>(false);
   const sections = ["home"];
+
+  useEffect(() => {
+    if (nav) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+
+    return () => {};
+  }, [nav]);
 
   return (
     <>
