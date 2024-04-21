@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://derick-almeida.github.io/portfolio/",
+  "homepage": "https://derick-almeida.github.io/portfolio",
   "private": false,
   "version": "0.0.0",
   "type": "module",
@@ -13,7 +13,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
