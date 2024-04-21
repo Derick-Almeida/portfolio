@@ -5,7 +5,7 @@ export const main = styled.main`
   flex-direction: column;
   gap: 3rem;
 
-  min-height: 75vh;
+  height: 78vh;
   max-width: 100%;
   overflow-x: hidden;
   padding: 2rem 0;

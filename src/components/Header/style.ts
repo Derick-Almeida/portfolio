@@ -7,6 +7,7 @@ export const header = styled.header`
   padding: 0 5%;
 
   backdrop-filter: blur(8px);
+  height: 12vh;
 
   display: flex;
   align-items: center;

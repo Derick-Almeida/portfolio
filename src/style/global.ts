@@ -9,7 +9,8 @@ const GlobalStyle = createGlobalStyle`
 
   :root{
       --black: #000;
-      --bg-color: #111111;
+      --bg-color: #01061b;
+      --bg-footer: #000416;
       --text-color: #ffffff;
       --theme-color: #14E956;
       --sm: 425px;
