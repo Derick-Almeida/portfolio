@@ -16,7 +16,7 @@ export const ul = styled.ul`
 export const button = styled.button`
   position: absolute;
   right: 2rem;
-  top: 2rem;
+  top: 1.5rem;
 
   border: none;
   background: transparent;
@@ -59,7 +59,6 @@ export const nav = styled.nav<Props>`
   right: 0;
   overflow: hidden;
 
-  width: 0;
   height: 100vh;
   background-color: var(--bg-color);
 
@@ -72,7 +71,7 @@ export const nav = styled.nav<Props>`
           width: 100%;
 
           & ${link} {
-            transform: scaleX(1);
+            transform: translateX(0);
           }
         `;
       case "close":
@@ -80,7 +79,7 @@ export const nav = styled.nav<Props>`
           width: 0%;
 
           & ${link} {
-            transform: scaleX(0);
+            transform: translateX(100%);
           }
         `;
     }
