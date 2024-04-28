@@ -7,13 +7,13 @@ export const SignBoard = () => {
         preRenderFirstString={true}
         sequence={[
           "Dérick Silva",
-          2000,
+          4500,
           "desenvolvedor front end",
-          2000,
+          3000,
           "desenvolvedor back end",
-          2000,
+          3000,
           "desenvolvedor full stack",
-          2000,
+          3000,
         ]}
         wrapper="h3"
         repeat={Infinity}
