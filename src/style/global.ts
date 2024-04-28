@@ -1,6 +1,9 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+interface Props {
+  load: boolean;
+}
+const GlobalStyle = createGlobalStyle<Props>`
   *{
       margin: 0;
       padding: 0;
@@ -18,19 +21,37 @@ const GlobalStyle = createGlobalStyle`
       --lg: 1024px;
   }
 
+  html {
+    ::-webkit-scrollbar{
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background-color: #000c41;
+      border-radius: 5rem;
+    }
+
+    ${({ load }) =>
+      load &&
+      css`
+        overflow: hidden;
+      `}
+  }
+
   body {
       background-color: var(--bg-color);
       color: var(--text-color);
       max-width: 100%;
       overflow-x: hidden;
+      overflow: hidden;
   }
 
-  a{
+  a {
     text-decoration: none;
     color: inherit;
   }
 
-  button{
+  button {
     cursor: pointer;
   }
 
